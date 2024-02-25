@@ -1,0 +1,22 @@
+V3 11
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.vhd" 2023/02/26.17:49:22 P.20131013
+EN work/contador09 1677455517 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/contador09/Behavioral 1677455518 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.vhd" \
+      EN work/contador09 1677455517
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/DPSWS.vhd" 2023/02/26.17:02:09 P.20131013
+EN work/DPSWS 1677455519 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/DPSWS.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/DPSWS/Behavioral 1677455520 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/DPSWS.vhd" \
+      EN work/DPSWS 1677455519
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/Top.vhd" 2023/02/26.17:51:53 P.20131013
+EN work/Top 1677455521 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/Top.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/Top/Behavioral 1677455522 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/Top.vhd" \
+      EN work/Top 1677455521 CP work/contador09 CP work/DPSWS

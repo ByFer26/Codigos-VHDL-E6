@@ -1,0 +1,507 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf elbertv2.ucf
+
+Design file:              top.ncd
+Physical constraint file: top.pcf
+Device,package,speed:     xc3s50a,tq144,-5 (PRODUCTION 1.42 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 611 paths analyzed, 115 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   5.912ns.
+--------------------------------------------------------------------------------
+
+Paths for end point servo/ciclo_0 (SLICE_X13Y16.SR), 20 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     77.421ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               servo/delay_1 (FF)
+  Destination:          servo/ciclo_0 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.823ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.089ns (0.204 - 0.293)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: servo/delay_1 to servo/ciclo_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y25.YQ       Tcko                  0.524   servo/delay<0>
+                                                       servo/delay_1
+    SLICE_X6Y26.F1       net (fanout=2)        0.449   servo/delay<1>
+    SLICE_X6Y26.X        Tilo                  0.601   servo/milis_cmp_eq000042
+                                                       servo/milis_cmp_eq000042
+    SLICE_X6Y29.F1       net (fanout=2)        0.749   servo/milis_cmp_eq000042
+    SLICE_X6Y29.X        Tilo                  0.601   servo/milis_cmp_eq0000
+                                                       servo/milis_cmp_eq000044
+    SLICE_X12Y16.F4      net (fanout=1)        0.869   servo/milis_cmp_eq0000
+    SLICE_X12Y16.X       Tilo                  0.601   servo/ciclo_and0000
+                                                       servo/ciclo_and000026
+    SLICE_X13Y16.SR      net (fanout=4)        0.996   servo/ciclo_and0000
+    SLICE_X13Y16.CLK     Tsrck                 0.433   servo/ciclo<0>
+                                                       servo/ciclo_0
+    -------------------------------------------------  ---------------------------
+    Total                                      5.823ns (2.760ns logic, 3.063ns route)
+                                                       (47.4% logic, 52.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.503ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               servo/delay_3 (FF)
+  Destination:          servo/ciclo_0 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.732ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.098ns (0.204 - 0.302)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: servo/delay_3 to servo/ciclo_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y26.YQ       Tcko                  0.524   servo/delay<2>
+                                                       servo/delay_3
+    SLICE_X6Y26.F3       net (fanout=2)        0.358   servo/delay<3>
+    SLICE_X6Y26.X        Tilo                  0.601   servo/milis_cmp_eq000042
+                                                       servo/milis_cmp_eq000042
+    SLICE_X6Y29.F1       net (fanout=2)        0.749   servo/milis_cmp_eq000042
+    SLICE_X6Y29.X        Tilo                  0.601   servo/milis_cmp_eq0000
+                                                       servo/milis_cmp_eq000044
+    SLICE_X12Y16.F4      net (fanout=1)        0.869   servo/milis_cmp_eq0000
+    SLICE_X12Y16.X       Tilo                  0.601   servo/ciclo_and0000
+                                                       servo/ciclo_and000026
+    SLICE_X13Y16.SR      net (fanout=4)        0.996   servo/ciclo_and0000
+    SLICE_X13Y16.CLK     Tsrck                 0.433   servo/ciclo<0>
+                                                       servo/ciclo_0
+    -------------------------------------------------  ---------------------------
+    Total                                      5.732ns (2.760ns logic, 2.972ns route)
+                                                       (48.2% logic, 51.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.503ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               servo/delay_2 (FF)
+  Destination:          servo/ciclo_0 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.732ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.098ns (0.204 - 0.302)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: servo/delay_2 to servo/ciclo_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y26.XQ       Tcko                  0.495   servo/delay<2>
+                                                       servo/delay_2
+    SLICE_X6Y26.F2       net (fanout=2)        0.387   servo/delay<2>
+    SLICE_X6Y26.X        Tilo                  0.601   servo/milis_cmp_eq000042
+                                                       servo/milis_cmp_eq000042
+    SLICE_X6Y29.F1       net (fanout=2)        0.749   servo/milis_cmp_eq000042
+    SLICE_X6Y29.X        Tilo                  0.601   servo/milis_cmp_eq0000
+                                                       servo/milis_cmp_eq000044
+    SLICE_X12Y16.F4      net (fanout=1)        0.869   servo/milis_cmp_eq0000
+    SLICE_X12Y16.X       Tilo                  0.601   servo/ciclo_and0000
+                                                       servo/ciclo_and000026
+    SLICE_X13Y16.SR      net (fanout=4)        0.996   servo/ciclo_and0000
+    SLICE_X13Y16.CLK     Tsrck                 0.433   servo/ciclo<0>
+                                                       servo/ciclo_0
+    -------------------------------------------------  ---------------------------
+    Total                                      5.732ns (2.731ns logic, 3.001ns route)
+                                                       (47.6% logic, 52.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point servo/ciclo_1 (SLICE_X13Y16.SR), 20 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     77.421ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               servo/delay_1 (FF)
+  Destination:          servo/ciclo_1 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.823ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.089ns (0.204 - 0.293)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: servo/delay_1 to servo/ciclo_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y25.YQ       Tcko                  0.524   servo/delay<0>
+                                                       servo/delay_1
+    SLICE_X6Y26.F1       net (fanout=2)        0.449   servo/delay<1>
+    SLICE_X6Y26.X        Tilo                  0.601   servo/milis_cmp_eq000042
+                                                       servo/milis_cmp_eq000042
+    SLICE_X6Y29.F1       net (fanout=2)        0.749   servo/milis_cmp_eq000042
+    SLICE_X6Y29.X        Tilo                  0.601   servo/milis_cmp_eq0000
+                                                       servo/milis_cmp_eq000044
+    SLICE_X12Y16.F4      net (fanout=1)        0.869   servo/milis_cmp_eq0000
+    SLICE_X12Y16.X       Tilo                  0.601   servo/ciclo_and0000
+                                                       servo/ciclo_and000026
+    SLICE_X13Y16.SR      net (fanout=4)        0.996   servo/ciclo_and0000
+    SLICE_X13Y16.CLK     Tsrck                 0.433   servo/ciclo<0>
+                                                       servo/ciclo_1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.823ns (2.760ns logic, 3.063ns route)
+                                                       (47.4% logic, 52.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.503ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               servo/delay_3 (FF)
+  Destination:          servo/ciclo_1 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.732ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.098ns (0.204 - 0.302)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: servo/delay_3 to servo/ciclo_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y26.YQ       Tcko                  0.524   servo/delay<2>
+                                                       servo/delay_3
+    SLICE_X6Y26.F3       net (fanout=2)        0.358   servo/delay<3>
+    SLICE_X6Y26.X        Tilo                  0.601   servo/milis_cmp_eq000042
+                                                       servo/milis_cmp_eq000042
+    SLICE_X6Y29.F1       net (fanout=2)        0.749   servo/milis_cmp_eq000042
+    SLICE_X6Y29.X        Tilo                  0.601   servo/milis_cmp_eq0000
+                                                       servo/milis_cmp_eq000044
+    SLICE_X12Y16.F4      net (fanout=1)        0.869   servo/milis_cmp_eq0000
+    SLICE_X12Y16.X       Tilo                  0.601   servo/ciclo_and0000
+                                                       servo/ciclo_and000026
+    SLICE_X13Y16.SR      net (fanout=4)        0.996   servo/ciclo_and0000
+    SLICE_X13Y16.CLK     Tsrck                 0.433   servo/ciclo<0>
+                                                       servo/ciclo_1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.732ns (2.760ns logic, 2.972ns route)
+                                                       (48.2% logic, 51.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.503ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               servo/delay_2 (FF)
+  Destination:          servo/ciclo_1 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.732ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.098ns (0.204 - 0.302)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: servo/delay_2 to servo/ciclo_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y26.XQ       Tcko                  0.495   servo/delay<2>
+                                                       servo/delay_2
+    SLICE_X6Y26.F2       net (fanout=2)        0.387   servo/delay<2>
+    SLICE_X6Y26.X        Tilo                  0.601   servo/milis_cmp_eq000042
+                                                       servo/milis_cmp_eq000042
+    SLICE_X6Y29.F1       net (fanout=2)        0.749   servo/milis_cmp_eq000042
+    SLICE_X6Y29.X        Tilo                  0.601   servo/milis_cmp_eq0000
+                                                       servo/milis_cmp_eq000044
+    SLICE_X12Y16.F4      net (fanout=1)        0.869   servo/milis_cmp_eq0000
+    SLICE_X12Y16.X       Tilo                  0.601   servo/ciclo_and0000
+                                                       servo/ciclo_and000026
+    SLICE_X13Y16.SR      net (fanout=4)        0.996   servo/ciclo_and0000
+    SLICE_X13Y16.CLK     Tsrck                 0.433   servo/ciclo<0>
+                                                       servo/ciclo_1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.732ns (2.731ns logic, 3.001ns route)
+                                                       (47.6% logic, 52.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point servo/ciclo_2 (SLICE_X13Y17.SR), 20 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     77.421ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               servo/delay_1 (FF)
+  Destination:          servo/ciclo_2 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.823ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.089ns (0.204 - 0.293)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: servo/delay_1 to servo/ciclo_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y25.YQ       Tcko                  0.524   servo/delay<0>
+                                                       servo/delay_1
+    SLICE_X6Y26.F1       net (fanout=2)        0.449   servo/delay<1>
+    SLICE_X6Y26.X        Tilo                  0.601   servo/milis_cmp_eq000042
+                                                       servo/milis_cmp_eq000042
+    SLICE_X6Y29.F1       net (fanout=2)        0.749   servo/milis_cmp_eq000042
+    SLICE_X6Y29.X        Tilo                  0.601   servo/milis_cmp_eq0000
+                                                       servo/milis_cmp_eq000044
+    SLICE_X12Y16.F4      net (fanout=1)        0.869   servo/milis_cmp_eq0000
+    SLICE_X12Y16.X       Tilo                  0.601   servo/ciclo_and0000
+                                                       servo/ciclo_and000026
+    SLICE_X13Y17.SR      net (fanout=4)        0.996   servo/ciclo_and0000
+    SLICE_X13Y17.CLK     Tsrck                 0.433   servo/ciclo<2>
+                                                       servo/ciclo_2
+    -------------------------------------------------  ---------------------------
+    Total                                      5.823ns (2.760ns logic, 3.063ns route)
+                                                       (47.4% logic, 52.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.503ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               servo/delay_3 (FF)
+  Destination:          servo/ciclo_2 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.732ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.098ns (0.204 - 0.302)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: servo/delay_3 to servo/ciclo_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y26.YQ       Tcko                  0.524   servo/delay<2>
+                                                       servo/delay_3
+    SLICE_X6Y26.F3       net (fanout=2)        0.358   servo/delay<3>
+    SLICE_X6Y26.X        Tilo                  0.601   servo/milis_cmp_eq000042
+                                                       servo/milis_cmp_eq000042
+    SLICE_X6Y29.F1       net (fanout=2)        0.749   servo/milis_cmp_eq000042
+    SLICE_X6Y29.X        Tilo                  0.601   servo/milis_cmp_eq0000
+                                                       servo/milis_cmp_eq000044
+    SLICE_X12Y16.F4      net (fanout=1)        0.869   servo/milis_cmp_eq0000
+    SLICE_X12Y16.X       Tilo                  0.601   servo/ciclo_and0000
+                                                       servo/ciclo_and000026
+    SLICE_X13Y17.SR      net (fanout=4)        0.996   servo/ciclo_and0000
+    SLICE_X13Y17.CLK     Tsrck                 0.433   servo/ciclo<2>
+                                                       servo/ciclo_2
+    -------------------------------------------------  ---------------------------
+    Total                                      5.732ns (2.760ns logic, 2.972ns route)
+                                                       (48.2% logic, 51.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.503ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               servo/delay_2 (FF)
+  Destination:          servo/ciclo_2 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.732ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.098ns (0.204 - 0.302)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: servo/delay_2 to servo/ciclo_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y26.XQ       Tcko                  0.495   servo/delay<2>
+                                                       servo/delay_2
+    SLICE_X6Y26.F2       net (fanout=2)        0.387   servo/delay<2>
+    SLICE_X6Y26.X        Tilo                  0.601   servo/milis_cmp_eq000042
+                                                       servo/milis_cmp_eq000042
+    SLICE_X6Y29.F1       net (fanout=2)        0.749   servo/milis_cmp_eq000042
+    SLICE_X6Y29.X        Tilo                  0.601   servo/milis_cmp_eq0000
+                                                       servo/milis_cmp_eq000044
+    SLICE_X12Y16.F4      net (fanout=1)        0.869   servo/milis_cmp_eq0000
+    SLICE_X12Y16.X       Tilo                  0.601   servo/ciclo_and0000
+                                                       servo/ciclo_and000026
+    SLICE_X13Y17.SR      net (fanout=4)        0.996   servo/ciclo_and0000
+    SLICE_X13Y17.CLK     Tsrck                 0.433   servo/ciclo<2>
+                                                       servo/ciclo_2
+    -------------------------------------------------  ---------------------------
+    Total                                      5.732ns (2.731ns logic, 3.001ns route)
+                                                       (47.6% logic, 52.4% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point servo/alto_18 (SLICE_X16Y6.G3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.112ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               servo/estado_3 (FF)
+  Destination:          servo/alto_18 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.115ns (Levels of Logic = 1)
+  Clock Path Skew:      0.003ns (0.085 - 0.082)
+  Source Clock:         clk_BUFGP rising at 83.333ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: servo/estado_3 to servo/alto_18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y4.XQ       Tcko                  0.396   servo/estado<3>
+                                                       servo/estado_3
+    SLICE_X16Y6.G3       net (fanout=4)        0.269   servo/estado<3>
+    SLICE_X16Y6.CLK      Tckg        (-Th)    -0.450   servo/alto<18>
+                                                       servo/alto_mux0001<5>11
+                                                       servo/alto_18
+    -------------------------------------------------  ---------------------------
+    Total                                      1.115ns (0.846ns logic, 0.269ns route)
+                                                       (75.9% logic, 24.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point servo/alto_9 (SLICE_X17Y8.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.160ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               servo/estado_5 (FF)
+  Destination:          servo/alto_9 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.154ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.006ns (0.066 - 0.072)
+  Source Clock:         clk_BUFGP rising at 83.333ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: servo/estado_5 to servo/alto_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y7.YQ       Tcko                  0.419   servo/estado<1>
+                                                       servo/estado_5
+    SLICE_X17Y8.F4       net (fanout=6)        0.329   servo/estado<5>
+    SLICE_X17Y8.CLK      Tckf        (-Th)    -0.406   servo/alto<9>
+                                                       servo/alto_mux0001<14>1
+                                                       servo/alto_9
+    -------------------------------------------------  ---------------------------
+    Total                                      1.154ns (0.825ns logic, 0.329ns route)
+                                                       (71.5% logic, 28.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point servo/alto_13 (SLICE_X17Y9.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.218ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               servo/estado_9 (FF)
+  Destination:          servo/alto_13 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.198ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.020ns (0.066 - 0.086)
+  Source Clock:         clk_BUFGP rising at 83.333ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: servo/estado_9 to servo/alto_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y2.YQ       Tcko                  0.419   servo/estado<9>
+                                                       servo/estado_9
+    SLICE_X17Y9.SR       net (fanout=9)        0.489   servo/estado<9>
+    SLICE_X17Y9.CLK      Tcksr       (-Th)    -0.290   servo/alto<13>
+                                                       servo/alto_13
+    -------------------------------------------------  ---------------------------
+    Total                                      1.198ns (0.709ns logic, 0.489ns route)
+                                                       (59.2% logic, 40.8% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 82.005ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 83.333ns
+  Low pulse: 41.666ns
+  Low pulse limit: 0.664ns (Tcl)
+  Physical resource: servo/alto<11>/CLK
+  Logical resource: servo/alto_11/CK
+  Location pin: SLICE_X16Y8.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 82.005ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 83.333ns
+  High pulse: 41.666ns
+  High pulse limit: 0.664ns (Tch)
+  Physical resource: servo/alto<11>/CLK
+  Logical resource: servo/alto_11/CK
+  Location pin: SLICE_X16Y8.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 82.005ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 83.333ns
+  Low pulse: 41.666ns
+  Low pulse limit: 0.664ns (Tcl)
+  Physical resource: servo/attach/CLK
+  Logical resource: servo/attach/CK
+  Location pin: SLICE_X14Y14.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    5.912|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 611 paths, 0 nets, and 211 connections
+
+Design statistics:
+   Minimum period:   5.912ns{1}   (Maximum frequency: 169.147MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Wed Mar 29 21:49:02 2023 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 188 MB
+
+
+

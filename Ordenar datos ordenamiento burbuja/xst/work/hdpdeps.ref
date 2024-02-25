@@ -1,0 +1,15 @@
+V3 7
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/ordenar_datos/ordenar.vhd" 2023/04/09.21:50:38 P.20131013
+EN work/ordenar 1681098642 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/ordenar_datos/ordenar.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/ordenar/Behavioral 1681098643 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/ordenar_datos/ordenar.vhd" \
+      EN work/ordenar 1681098642
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/ordenar_datos/top.vhd" 2023/04/09.19:09:01 P.20131013
+EN work/top 1681098644 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/ordenar_datos/top.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/top/Behavioral 1681098645 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/ordenar_datos/top.vhd" \
+      EN work/top 1681098644 CP work/ordenar

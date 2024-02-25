@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/RX.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/RX.syr" 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/RX.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/RX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-5 "RX.ngc" RX.ngd  
+map -intstyle ise -p xc3s50a-tq144-5 -cm area -ir off -pr off -c 100 -o RX_map.ncd RX.ngd RX.pcf 
+par -w -intstyle ise -ol high -t 1 RX_map.ncd RX.ncd RX.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml RX.twx RX.ncd -o RX.twr RX.pcf 

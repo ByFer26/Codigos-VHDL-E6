@@ -1,0 +1,19 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Apr 09 21:51:24 2023
+//! **************************************************************************
+
+SCHEMATIC START;
+CONFIG VCCAUX = "3.3";
+COMP "clk" LOCATE = SITE "P129" LEVEL 1;
+COMP "mayor<0>" LOCATE = SITE "P55" LEVEL 1;
+COMP "mayor<1>" LOCATE = SITE "P54" LEVEL 1;
+COMP "mayor<2>" LOCATE = SITE "P51" LEVEL 1;
+COMP "mayor<3>" LOCATE = SITE "P50" LEVEL 1;
+COMP "mayor<4>" LOCATE = SITE "P49" LEVEL 1;
+COMP "mayor<5>" LOCATE = SITE "P48" LEVEL 1;
+COMP "mayor<6>" LOCATE = SITE "P47" LEVEL 1;
+COMP "mayor<7>" LOCATE = SITE "P46" LEVEL 1;
+COMP "pulsador" LOCATE = SITE "P80" LEVEL 1;
+NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+SCHEMATIC END;
+

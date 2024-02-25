@@ -1,0 +1,10 @@
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/recepcion.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/recepcion.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-5 "recepcion.ngc" recepcion.ngd  
+map -intstyle ise -p xc3s50a-tq144-5 -cm area -ir off -pr off -c 100 -o recepcion_map.ncd recepcion.ngd recepcion.pcf 
+par -w -intstyle ise -ol high -t 1 recepcion_map.ncd recepcion.ncd recepcion.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml recepcion.twx recepcion.ncd -o recepcion.twr recepcion.pcf 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/recepcion.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/recepcion.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-5 "recepcion.ngc" recepcion.ngd  
+map -intstyle ise -p xc3s50a-tq144-5 -cm area -ir off -pr off -c 100 -o recepcion_map.ncd recepcion.ngd recepcion.pcf 
+par -w -intstyle ise -ol high -t 1 recepcion_map.ncd recepcion.ncd recepcion.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml recepcion.twx recepcion.ncd -o recepcion.twr recepcion.pcf 

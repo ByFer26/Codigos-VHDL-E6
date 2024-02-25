@@ -1,0 +1,15 @@
+V3 7
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart/top.vhd" 2023/03/24.22:54:01 P.20131013
+EN work/top 1680061334 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart/top.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/top/Behavioral 1680061335 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart/top.vhd" \
+      EN work/top 1680061334 CP work/transmisor
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart/transmisor.vhd" 2023/03/28.21:41:56 P.20131013
+EN work/transmisor 1680061332 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart/transmisor.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/transmisor/Behavioral 1680061333 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart/transmisor.vhd" \
+      EN work/transmisor 1680061332

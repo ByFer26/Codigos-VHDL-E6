@@ -1,0 +1,511 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf elbertv2.ucf
+
+Design file:              top.ncd
+Physical constraint file: top.pcf
+Device,package,speed:     xc3s50a,tq144,-5 (PRODUCTION 1.42 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1068 paths analyzed, 90 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   4.975ns.
+--------------------------------------------------------------------------------
+
+Paths for end point entradas/salida_3 (SLICE_X14Y0.CE), 24 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     78.358ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               entradas/delay_cambio_20 (FF)
+  Destination:          entradas/salida_3 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      4.958ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.017ns (0.241 - 0.258)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: entradas/delay_cambio_20 to entradas/salida_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y22.XQ      Tcko                  0.495   entradas/delay_cambio<20>
+                                                       entradas/delay_cambio_20
+    SLICE_X13Y19.F4      net (fanout=2)        1.251   entradas/delay_cambio<20>
+    SLICE_X13Y19.COUT    Topcyf                1.026   entradas/delay_cambio_cmp_eq0000
+                                                       entradas/delay_cambio_cmp_eq0000_wg_lut<4>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<4>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<5>
+    SLICE_X14Y0.CE       net (fanout=16)       2.031   entradas/delay_cambio_cmp_eq0000
+    SLICE_X14Y0.CLK      Tceck                 0.155   entradas/salida<3>
+                                                       entradas/salida_3
+    -------------------------------------------------  ---------------------------
+    Total                                      4.958ns (1.676ns logic, 3.282ns route)
+                                                       (33.8% logic, 66.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     78.483ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               entradas/delay_cambio_5 (FF)
+  Destination:          entradas/salida_3 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      4.888ns (Levels of Logic = 2)
+  Clock Path Skew:      0.038ns (0.043 - 0.005)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: entradas/delay_cambio_5 to entradas/salida_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y14.YQ      Tcko                  0.524   entradas/delay_cambio<4>
+                                                       entradas/delay_cambio_5
+    SLICE_X13Y18.F1      net (fanout=2)        1.022   entradas/delay_cambio<5>
+    SLICE_X13Y18.COUT    Topcyf                1.026   entradas/delay_cambio_cmp_eq0000_wg_cy<3>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_lut<2>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<2>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y19.CIN     net (fanout=1)        0.000   entradas/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y19.COUT    Tbyp                  0.130   entradas/delay_cambio_cmp_eq0000
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<4>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<5>
+    SLICE_X14Y0.CE       net (fanout=16)       2.031   entradas/delay_cambio_cmp_eq0000
+    SLICE_X14Y0.CLK      Tceck                 0.155   entradas/salida<3>
+                                                       entradas/salida_3
+    -------------------------------------------------  ---------------------------
+    Total                                      4.888ns (1.835ns logic, 3.053ns route)
+                                                       (37.5% logic, 62.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     78.489ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               entradas/delay_cambio_6 (FF)
+  Destination:          entradas/salida_3 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      4.882ns (Levels of Logic = 3)
+  Clock Path Skew:      0.038ns (0.043 - 0.005)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: entradas/delay_cambio_6 to entradas/salida_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y15.XQ      Tcko                  0.495   entradas/delay_cambio<6>
+                                                       entradas/delay_cambio_6
+    SLICE_X13Y17.F4      net (fanout=2)        0.915   entradas/delay_cambio<6>
+    SLICE_X13Y17.COUT    Topcyf                1.026   entradas/delay_cambio_cmp_eq0000_wg_cy<1>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_lut<0>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<0>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y18.CIN     net (fanout=1)        0.000   entradas/delay_cambio_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y18.COUT    Tbyp                  0.130   entradas/delay_cambio_cmp_eq0000_wg_cy<3>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<2>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y19.CIN     net (fanout=1)        0.000   entradas/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y19.COUT    Tbyp                  0.130   entradas/delay_cambio_cmp_eq0000
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<4>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<5>
+    SLICE_X14Y0.CE       net (fanout=16)       2.031   entradas/delay_cambio_cmp_eq0000
+    SLICE_X14Y0.CLK      Tceck                 0.155   entradas/salida<3>
+                                                       entradas/salida_3
+    -------------------------------------------------  ---------------------------
+    Total                                      4.882ns (1.936ns logic, 2.946ns route)
+                                                       (39.7% logic, 60.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point entradas/salida_2 (SLICE_X14Y0.CE), 24 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     78.358ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               entradas/delay_cambio_20 (FF)
+  Destination:          entradas/salida_2 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      4.958ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.017ns (0.241 - 0.258)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: entradas/delay_cambio_20 to entradas/salida_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y22.XQ      Tcko                  0.495   entradas/delay_cambio<20>
+                                                       entradas/delay_cambio_20
+    SLICE_X13Y19.F4      net (fanout=2)        1.251   entradas/delay_cambio<20>
+    SLICE_X13Y19.COUT    Topcyf                1.026   entradas/delay_cambio_cmp_eq0000
+                                                       entradas/delay_cambio_cmp_eq0000_wg_lut<4>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<4>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<5>
+    SLICE_X14Y0.CE       net (fanout=16)       2.031   entradas/delay_cambio_cmp_eq0000
+    SLICE_X14Y0.CLK      Tceck                 0.155   entradas/salida<3>
+                                                       entradas/salida_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.958ns (1.676ns logic, 3.282ns route)
+                                                       (33.8% logic, 66.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     78.483ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               entradas/delay_cambio_5 (FF)
+  Destination:          entradas/salida_2 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      4.888ns (Levels of Logic = 2)
+  Clock Path Skew:      0.038ns (0.043 - 0.005)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: entradas/delay_cambio_5 to entradas/salida_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y14.YQ      Tcko                  0.524   entradas/delay_cambio<4>
+                                                       entradas/delay_cambio_5
+    SLICE_X13Y18.F1      net (fanout=2)        1.022   entradas/delay_cambio<5>
+    SLICE_X13Y18.COUT    Topcyf                1.026   entradas/delay_cambio_cmp_eq0000_wg_cy<3>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_lut<2>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<2>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y19.CIN     net (fanout=1)        0.000   entradas/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y19.COUT    Tbyp                  0.130   entradas/delay_cambio_cmp_eq0000
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<4>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<5>
+    SLICE_X14Y0.CE       net (fanout=16)       2.031   entradas/delay_cambio_cmp_eq0000
+    SLICE_X14Y0.CLK      Tceck                 0.155   entradas/salida<3>
+                                                       entradas/salida_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.888ns (1.835ns logic, 3.053ns route)
+                                                       (37.5% logic, 62.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     78.489ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               entradas/delay_cambio_6 (FF)
+  Destination:          entradas/salida_2 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      4.882ns (Levels of Logic = 3)
+  Clock Path Skew:      0.038ns (0.043 - 0.005)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: entradas/delay_cambio_6 to entradas/salida_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y15.XQ      Tcko                  0.495   entradas/delay_cambio<6>
+                                                       entradas/delay_cambio_6
+    SLICE_X13Y17.F4      net (fanout=2)        0.915   entradas/delay_cambio<6>
+    SLICE_X13Y17.COUT    Topcyf                1.026   entradas/delay_cambio_cmp_eq0000_wg_cy<1>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_lut<0>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<0>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y18.CIN     net (fanout=1)        0.000   entradas/delay_cambio_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y18.COUT    Tbyp                  0.130   entradas/delay_cambio_cmp_eq0000_wg_cy<3>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<2>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y19.CIN     net (fanout=1)        0.000   entradas/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y19.COUT    Tbyp                  0.130   entradas/delay_cambio_cmp_eq0000
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<4>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<5>
+    SLICE_X14Y0.CE       net (fanout=16)       2.031   entradas/delay_cambio_cmp_eq0000
+    SLICE_X14Y0.CLK      Tceck                 0.155   entradas/salida<3>
+                                                       entradas/salida_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.882ns (1.936ns logic, 2.946ns route)
+                                                       (39.7% logic, 60.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point entradas/salida_5 (SLICE_X14Y1.CE), 24 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     78.358ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               entradas/delay_cambio_20 (FF)
+  Destination:          entradas/salida_5 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      4.958ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.017ns (0.241 - 0.258)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: entradas/delay_cambio_20 to entradas/salida_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y22.XQ      Tcko                  0.495   entradas/delay_cambio<20>
+                                                       entradas/delay_cambio_20
+    SLICE_X13Y19.F4      net (fanout=2)        1.251   entradas/delay_cambio<20>
+    SLICE_X13Y19.COUT    Topcyf                1.026   entradas/delay_cambio_cmp_eq0000
+                                                       entradas/delay_cambio_cmp_eq0000_wg_lut<4>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<4>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<5>
+    SLICE_X14Y1.CE       net (fanout=16)       2.031   entradas/delay_cambio_cmp_eq0000
+    SLICE_X14Y1.CLK      Tceck                 0.155   entradas/salida<5>
+                                                       entradas/salida_5
+    -------------------------------------------------  ---------------------------
+    Total                                      4.958ns (1.676ns logic, 3.282ns route)
+                                                       (33.8% logic, 66.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     78.483ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               entradas/delay_cambio_5 (FF)
+  Destination:          entradas/salida_5 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      4.888ns (Levels of Logic = 2)
+  Clock Path Skew:      0.038ns (0.043 - 0.005)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: entradas/delay_cambio_5 to entradas/salida_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y14.YQ      Tcko                  0.524   entradas/delay_cambio<4>
+                                                       entradas/delay_cambio_5
+    SLICE_X13Y18.F1      net (fanout=2)        1.022   entradas/delay_cambio<5>
+    SLICE_X13Y18.COUT    Topcyf                1.026   entradas/delay_cambio_cmp_eq0000_wg_cy<3>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_lut<2>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<2>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y19.CIN     net (fanout=1)        0.000   entradas/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y19.COUT    Tbyp                  0.130   entradas/delay_cambio_cmp_eq0000
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<4>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<5>
+    SLICE_X14Y1.CE       net (fanout=16)       2.031   entradas/delay_cambio_cmp_eq0000
+    SLICE_X14Y1.CLK      Tceck                 0.155   entradas/salida<5>
+                                                       entradas/salida_5
+    -------------------------------------------------  ---------------------------
+    Total                                      4.888ns (1.835ns logic, 3.053ns route)
+                                                       (37.5% logic, 62.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     78.489ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               entradas/delay_cambio_6 (FF)
+  Destination:          entradas/salida_5 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      4.882ns (Levels of Logic = 3)
+  Clock Path Skew:      0.038ns (0.043 - 0.005)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: entradas/delay_cambio_6 to entradas/salida_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y15.XQ      Tcko                  0.495   entradas/delay_cambio<6>
+                                                       entradas/delay_cambio_6
+    SLICE_X13Y17.F4      net (fanout=2)        0.915   entradas/delay_cambio<6>
+    SLICE_X13Y17.COUT    Topcyf                1.026   entradas/delay_cambio_cmp_eq0000_wg_cy<1>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_lut<0>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<0>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y18.CIN     net (fanout=1)        0.000   entradas/delay_cambio_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y18.COUT    Tbyp                  0.130   entradas/delay_cambio_cmp_eq0000_wg_cy<3>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<2>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y19.CIN     net (fanout=1)        0.000   entradas/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y19.COUT    Tbyp                  0.130   entradas/delay_cambio_cmp_eq0000
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<4>
+                                                       entradas/delay_cambio_cmp_eq0000_wg_cy<5>
+    SLICE_X14Y1.CE       net (fanout=16)       2.031   entradas/delay_cambio_cmp_eq0000
+    SLICE_X14Y1.CLK      Tceck                 0.155   entradas/salida<5>
+                                                       entradas/salida_5
+    -------------------------------------------------  ---------------------------
+    Total                                      4.882ns (1.936ns logic, 2.946ns route)
+                                                       (39.7% logic, 60.3% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point entradas/delay_cambio_22 (SLICE_X15Y23.F3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.367ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               entradas/delay_cambio_22 (FF)
+  Destination:          entradas/delay_cambio_22 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.367ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 83.333ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: entradas/delay_cambio_22 to entradas/delay_cambio_22
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y23.XQ      Tcko                  0.396   entradas/delay_cambio<22>
+                                                       entradas/delay_cambio_22
+    SLICE_X15Y23.F3      net (fanout=2)        0.269   entradas/delay_cambio<22>
+    SLICE_X15Y23.CLK     Tckf        (-Th)    -0.702   entradas/delay_cambio<22>
+                                                       entradas/delay_cambio<22>_rt
+                                                       entradas/Mcount_delay_cambio_xor<22>
+                                                       entradas/delay_cambio_22
+    -------------------------------------------------  ---------------------------
+    Total                                      1.367ns (1.098ns logic, 0.269ns route)
+                                                       (80.3% logic, 19.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point entradas/delay_cambio_6 (SLICE_X15Y15.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.374ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               entradas/delay_cambio_6 (FF)
+  Destination:          entradas/delay_cambio_6 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.374ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 83.333ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: entradas/delay_cambio_6 to entradas/delay_cambio_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y15.XQ      Tcko                  0.396   entradas/delay_cambio<6>
+                                                       entradas/delay_cambio_6
+    SLICE_X15Y15.F4      net (fanout=2)        0.276   entradas/delay_cambio<6>
+    SLICE_X15Y15.CLK     Tckf        (-Th)    -0.702   entradas/delay_cambio<6>
+                                                       entradas/delay_cambio<6>_rt
+                                                       entradas/Mcount_delay_cambio_xor<6>
+                                                       entradas/delay_cambio_6
+    -------------------------------------------------  ---------------------------
+    Total                                      1.374ns (1.098ns logic, 0.276ns route)
+                                                       (79.9% logic, 20.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point entradas/delay_cambio_2 (SLICE_X15Y13.F3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.383ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               entradas/delay_cambio_2 (FF)
+  Destination:          entradas/delay_cambio_2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.383ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 83.333ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: entradas/delay_cambio_2 to entradas/delay_cambio_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y13.XQ      Tcko                  0.396   entradas/delay_cambio<2>
+                                                       entradas/delay_cambio_2
+    SLICE_X15Y13.F3      net (fanout=2)        0.285   entradas/delay_cambio<2>
+    SLICE_X15Y13.CLK     Tckf        (-Th)    -0.702   entradas/delay_cambio<2>
+                                                       entradas/delay_cambio<2>_rt
+                                                       entradas/Mcount_delay_cambio_xor<2>
+                                                       entradas/delay_cambio_2
+    -------------------------------------------------  ---------------------------
+    Total                                      1.383ns (1.098ns logic, 0.285ns route)
+                                                       (79.4% logic, 20.6% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 82.005ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 83.333ns
+  Low pulse: 41.666ns
+  Low pulse limit: 0.664ns (Tcl)
+  Physical resource: entradas/salida<3>/CLK
+  Logical resource: entradas/salida_3/CK
+  Location pin: SLICE_X14Y0.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 82.005ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 83.333ns
+  High pulse: 41.666ns
+  High pulse limit: 0.664ns (Tch)
+  Physical resource: entradas/salida<3>/CLK
+  Logical resource: entradas/salida_3/CK
+  Location pin: SLICE_X14Y0.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 82.005ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 83.333ns
+  Low pulse: 41.666ns
+  Low pulse limit: 0.664ns (Tcl)
+  Physical resource: entradas/salida<3>/CLK
+  Logical resource: entradas/salida_2/CK
+  Location pin: SLICE_X14Y0.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.975|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 1068 paths, 0 nets, and 94 connections
+
+Design statistics:
+   Minimum period:   4.975ns{1}   (Maximum frequency: 201.005MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Sat Feb 24 23:45:02 2024 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4523 MB
+
+
+

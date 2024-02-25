@@ -1,0 +1,22 @@
+V3 11
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/led_test.vhd" 2023/03/24.11:48:37 P.20131013
+EN work/led_test 1679889849 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/led_test.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/led_test/Behavioral 1679889850 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/led_test.vhd" \
+      EN work/led_test 1679889849
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/recepcion.vhd" 2023/03/24.15:46:30 P.20131013
+EN work/RX 1679889847 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/recepcion.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/RX/Behavioral 1679889848 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/recepcion.vhd" \
+      EN work/RX 1679889847
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/top.vhd" 2023/03/26.22:03:46 P.20131013
+EN work/top 1679889851 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/top.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/top/Behavioral 1679889852 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/top.vhd" \
+      EN work/top 1679889851 CP work/RX CP work/led_test

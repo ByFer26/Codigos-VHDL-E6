@@ -1,0 +1,574 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Reading design: Top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top"
+Output Format                      : NGC
+Target Device                      : xc3s50a-5-tq144
+
+---- Source Options
+Top Module Name                    : Top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/RX.vhd" in Library work.
+Architecture behavioral of Entity rx is up to date.
+Compiling vhdl file "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Multiplexor.vhd" in Library work.
+Architecture behavioral of Entity multiplexor is up to date.
+Compiling vhdl file "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Reloj.vhd" in Library work.
+Entity <reloj> compiled.
+Entity <reloj> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/TX.vhd" in Library work.
+Architecture behavioral of Entity tx is up to date.
+Compiling vhdl file "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Servomotor.vhd" in Library work.
+Architecture behavioral of Entity servomotor is up to date.
+Compiling vhdl file "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Reloj_ADC.vhd" in Library work.
+Architecture behavioral of Entity reloj_adc is up to date.
+Compiling vhdl file "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Top.vhd" in Library work.
+Architecture behavioral of Entity top is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Top> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <RX> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <Multiplexor> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <Reloj> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <TX> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <Servomotor> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <Reloj_ADC> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Top> in library <work> (Architecture <behavioral>).
+Entity <Top> analyzed. Unit <Top> generated.
+
+Analyzing Entity <RX> in library <work> (Architecture <Behavioral>).
+Entity <RX> analyzed. Unit <RX> generated.
+
+Analyzing Entity <Multiplexor> in library <work> (Architecture <Behavioral>).
+Entity <Multiplexor> analyzed. Unit <Multiplexor> generated.
+
+Analyzing Entity <Reloj> in library <work> (Architecture <Behavioral>).
+Entity <Reloj> analyzed. Unit <Reloj> generated.
+
+Analyzing Entity <TX> in library <work> (Architecture <Behavioral>).
+Entity <TX> analyzed. Unit <TX> generated.
+
+Analyzing Entity <Servomotor> in library <work> (Architecture <Behavioral>).
+Entity <Servomotor> analyzed. Unit <Servomotor> generated.
+
+Analyzing Entity <Reloj_ADC> in library <work> (Architecture <Behavioral>).
+Entity <Reloj_ADC> analyzed. Unit <Reloj_ADC> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <RX>.
+    Related source file is "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/RX.vhd".
+    Found finite state machine <FSM_0> for signal <bandera>.
+    -----------------------------------------------------------------------
+    | States             | 2                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | bandera$not0000           (positive)           |
+    | Power Up State     | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <b>.
+    Found 4-bit register for signal <control>.
+    Found 8-bit register for signal <caracter>.
+    Found 24-bit up counter for signal <delay_cambio>.
+    Found 17-bit up counter for signal <estados>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 Counter(s).
+	inferred  13 D-type flip-flop(s).
+Unit <RX> synthesized.
+
+
+Synthesizing Unit <Multiplexor>.
+    Related source file is "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Multiplexor.vhd".
+    Found 16x5-bit ROM for signal <$rom0000>.
+    Found 2-bit register for signal <OE>.
+    Found 3-bit register for signal <Canales>.
+    Found 25-bit up counter for signal <cambio>.
+    Found 5-bit up counter for signal <ciclo>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred   5 D-type flip-flop(s).
+Unit <Multiplexor> synthesized.
+
+
+Synthesizing Unit <Reloj>.
+    Related source file is "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Reloj.vhd".
+    Found 1-bit register for signal <OSC>.
+    Found 24-bit up counter for signal <cambio>.
+    Found 1-bit register for signal <ciclo<0>>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+Unit <Reloj> synthesized.
+
+
+Synthesizing Unit <TX>.
+    Related source file is "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/TX.vhd".
+    Found 1-bit register for signal <TX_01>.
+    Found 4-bit up counter for signal <ciclo>.
+    Found 24-bit up counter for signal <delay_cambio>.
+    Found 17-bit up counter for signal <estado>.
+    Summary:
+	inferred   3 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <TX> synthesized.
+
+
+Synthesizing Unit <Servomotor>.
+    Related source file is "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Servomotor.vhd".
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <estado> of Case statement line 48 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <estado> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <estado>.
+    Found 1-bit register for signal <attach>.
+    Found 25-bit register for signal <alto>.
+    Found 8-bit up counter for signal <ciclo>.
+    Found 12-bit up counter for signal <delay>.
+    Found 10-bit register for signal <estado>.
+    Found 14-bit up counter for signal <milis>.
+    Summary:
+	inferred   3 Counter(s).
+	inferred  36 D-type flip-flop(s).
+Unit <Servomotor> synthesized.
+
+
+Synthesizing Unit <Reloj_ADC>.
+    Related source file is "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Reloj_ADC.vhd".
+    Found 1-bit register for signal <pulso>.
+    Found 24-bit up counter for signal <cambio>.
+    Found 1-bit register for signal <estado<0>>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+Unit <Reloj_ADC> synthesized.
+
+
+Synthesizing Unit <Top>.
+    Related source file is "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Top.vhd".
+Unit <Top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x5-bit ROM                                          : 1
+# Counters                                             : 11
+ 12-bit up counter                                     : 1
+ 14-bit up counter                                     : 1
+ 17-bit up counter                                     : 2
+ 24-bit up counter                                     : 4
+ 25-bit up counter                                     : 1
+ 5-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 20
+ 1-bit register                                        : 15
+ 10-bit register                                       : 1
+ 2-bit register                                        : 1
+ 25-bit register                                       : 1
+ 3-bit register                                        : 1
+ 4-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <RX/bandera/FSM> on signal <bandera[1:1]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 0
+ 01    | 1
+-------------------
+INFO:Xst:2261 - The FF/Latch <alto_2> in Unit <Servomotor> is equivalent to the following FF/Latch, which will be removed : <alto_3> 
+INFO:Xst:2261 - The FF/Latch <alto_0> in Unit <Servomotor> is equivalent to the following FF/Latch, which will be removed : <alto_1> 
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# ROMs                                                 : 1
+ 16x5-bit ROM                                          : 1
+# Counters                                             : 10
+ 12-bit up counter                                     : 1
+ 17-bit up counter                                     : 2
+ 24-bit up counter                                     : 4
+ 25-bit up counter                                     : 1
+ 5-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 59
+ Flip-Flops                                            : 59
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <alto_2> in Unit <Servomotor> is equivalent to the following FF/Latch, which will be removed : <alto_3> 
+INFO:Xst:2261 - The FF/Latch <alto_0> in Unit <Servomotor> is equivalent to the following FF/Latch, which will be removed : <alto_1> 
+INFO:Xst:2261 - The FF/Latch <alto_7> in Unit <Servomotor> is equivalent to the following FF/Latch, which will be removed : <alto_8> 
+INFO:Xst:2261 - The FF/Latch <alto_4> in Unit <Servomotor> is equivalent to the following 2 FFs/Latches, which will be removed : <alto_5> <alto_6> 
+
+Optimizing unit <Top> ...
+
+Optimizing unit <RX> ...
+
+Optimizing unit <TX> ...
+
+Optimizing unit <Servomotor> ...
+INFO:Xst:2261 - The FF/Latch <alto_13> in Unit <Servomotor> is equivalent to the following 2 FFs/Latches, which will be removed : <alto_14> <alto_15> 
+INFO:Xst:2261 - The FF/Latch <alto_11> in Unit <Servomotor> is equivalent to the following FF/Latch, which will be removed : <alto_12> 
+INFO:Xst:2261 - The FF/Latch <alto_9> in Unit <Servomotor> is equivalent to the following FF/Latch, which will be removed : <alto_10> 
+INFO:Xst:2261 - The FF/Latch <alto_20> in Unit <Servomotor> is equivalent to the following 4 FFs/Latches, which will be removed : <alto_21> <alto_22> <alto_23> <alto_24> 
+INFO:Xst:2261 - The FF/Latch <alto_18> in Unit <Servomotor> is equivalent to the following FF/Latch, which will be removed : <alto_19> 
+INFO:Xst:2261 - The FF/Latch <alto_16> in Unit <Servomotor> is equivalent to the following FF/Latch, which will be removed : <alto_17> 
+INFO:Xst:2261 - The FF/Latch <alto_13> in Unit <Servomotor> is equivalent to the following 2 FFs/Latches, which will be removed : <alto_14> <alto_15> 
+INFO:Xst:2261 - The FF/Latch <alto_11> in Unit <Servomotor> is equivalent to the following FF/Latch, which will be removed : <alto_12> 
+INFO:Xst:2261 - The FF/Latch <alto_9> in Unit <Servomotor> is equivalent to the following FF/Latch, which will be removed : <alto_10> 
+INFO:Xst:2261 - The FF/Latch <alto_20> in Unit <Servomotor> is equivalent to the following 4 FFs/Latches, which will be removed : <alto_21> <alto_22> <alto_23> <alto_24> 
+INFO:Xst:2261 - The FF/Latch <alto_18> in Unit <Servomotor> is equivalent to the following FF/Latch, which will be removed : <alto_19> 
+INFO:Xst:2261 - The FF/Latch <alto_16> in Unit <Servomotor> is equivalent to the following FF/Latch, which will be removed : <alto_17> 
+INFO:Xst:2261 - The FF/Latch <alto_13> in Unit <Servomotor> is equivalent to the following 2 FFs/Latches, which will be removed : <alto_14> <alto_15> 
+INFO:Xst:2261 - The FF/Latch <alto_11> in Unit <Servomotor> is equivalent to the following FF/Latch, which will be removed : <alto_12> 
+INFO:Xst:2261 - The FF/Latch <alto_9> in Unit <Servomotor> is equivalent to the following FF/Latch, which will be removed : <alto_10> 
+INFO:Xst:2261 - The FF/Latch <alto_20> in Unit <Servomotor> is equivalent to the following 4 FFs/Latches, which will be removed : <alto_21> <alto_22> <alto_23> <alto_24> 
+INFO:Xst:2261 - The FF/Latch <alto_18> in Unit <Servomotor> is equivalent to the following FF/Latch, which will be removed : <alto_19> 
+INFO:Xst:2261 - The FF/Latch <alto_16> in Unit <Servomotor> is equivalent to the following FF/Latch, which will be removed : <alto_17> 
+INFO:Xst:2261 - The FF/Latch <alto_13> in Unit <Servomotor> is equivalent to the following 2 FFs/Latches, which will be removed : <alto_14> <alto_15> 
+INFO:Xst:2261 - The FF/Latch <alto_11> in Unit <Servomotor> is equivalent to the following FF/Latch, which will be removed : <alto_12> 
+INFO:Xst:2261 - The FF/Latch <alto_9> in Unit <Servomotor> is equivalent to the following FF/Latch, which will be removed : <alto_10> 
+INFO:Xst:2261 - The FF/Latch <alto_20> in Unit <Servomotor> is equivalent to the following 4 FFs/Latches, which will be removed : <alto_21> <alto_22> <alto_23> <alto_24> 
+INFO:Xst:2261 - The FF/Latch <alto_18> in Unit <Servomotor> is equivalent to the following FF/Latch, which will be removed : <alto_19> 
+INFO:Xst:2261 - The FF/Latch <alto_16> in Unit <Servomotor> is equivalent to the following FF/Latch, which will be removed : <alto_17> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Top, actual ratio is 28.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 225
+ Flip-Flops                                            : 225
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Top.ngr
+Top Level Output File Name         : Top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 21
+
+Cell Usage :
+# BELS                             : 745
+#      GND                         : 1
+#      INV                         : 14
+#      LUT1                        : 167
+#      LUT2                        : 53
+#      LUT2_L                      : 5
+#      LUT3                        : 22
+#      LUT3_D                      : 1
+#      LUT4                        : 88
+#      LUT4_D                      : 3
+#      LUT4_L                      : 10
+#      MUXCY                       : 198
+#      MUXF5                       : 7
+#      VCC                         : 1
+#      XORCY                       : 175
+# FlipFlops/Latches                : 225
+#      FD                          : 15
+#      FDE                         : 39
+#      FDR                         : 43
+#      FDRE                        : 121
+#      FDS                         : 7
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 20
+#      IBUF                        : 11
+#      OBUF                        : 9
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50atq144-5 
+
+ Number of Slices:                      192  out of    704    27%  
+ Number of Slice Flip Flops:            225  out of   1408    15%  
+ Number of 4 input LUTs:                363  out of   1408    25%  
+ Number of IOs:                          21
+ Number of bonded IOBs:                  21  out of    108    19%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 225   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 5.819ns (Maximum Frequency: 171.856MHz)
+   Minimum input arrival time before clock: 7.103ns
+   Maximum output required time after clock: 5.248ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.819ns (frequency: 171.856MHz)
+  Total number of paths / destination ports: 9100 / 521
+-------------------------------------------------------------------------
+Delay:               5.819ns (Levels of Logic = 9)
+  Source:            RX/delay_cambio_8 (FF)
+  Destination:       RX/caracter_5 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: RX/delay_cambio_8 to RX/caracter_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.495   0.488  RX/delay_cambio_8 (RX/delay_cambio_8)
+     LUT4:I0->O            1   0.561   0.000  RX/bandera_cmp_eq0001_wg_lut<0> (RX/bandera_cmp_eq0001_wg_lut<0>)
+     MUXCY:S->O            1   0.523   0.000  RX/bandera_cmp_eq0001_wg_cy<0> (RX/bandera_cmp_eq0001_wg_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  RX/bandera_cmp_eq0001_wg_cy<1> (RX/bandera_cmp_eq0001_wg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  RX/bandera_cmp_eq0001_wg_cy<2> (RX/bandera_cmp_eq0001_wg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  RX/bandera_cmp_eq0001_wg_cy<3> (RX/bandera_cmp_eq0001_wg_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  RX/bandera_cmp_eq0001_wg_cy<4> (RX/bandera_cmp_eq0001_wg_cy<4>)
+     MUXCY:CI->O          29   0.179   1.074  RX/bandera_cmp_eq0001_wg_cy<5> (RX/bandera_cmp_eq0001)
+     LUT4_D:I3->O          7   0.561   0.604  RX/caracter_0_not000111 (RX/N01)
+     LUT4:I3->O            1   0.561   0.357  RX/caracter_7_not00011 (RX/caracter_7_not0001)
+     FDE:CE                    0.156          RX/caracter_7
+    ----------------------------------------
+    Total                      5.819ns (3.296ns logic, 2.523ns route)
+                                       (56.6% logic, 43.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 201 / 111
+-------------------------------------------------------------------------
+Offset:              7.103ns (Levels of Logic = 5)
+  Source:            EOC1 (PAD)
+  Destination:       TX/estado_16 (FF)
+  Destination Clock: clk rising
+
+  Data Path: EOC1 to TX/estado_16
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.824   0.488  EOC1_IBUF (EOC1_IBUF)
+     LUT2:I0->O           25   0.561   1.179  TX/delay_cambio_or00001 (TX/delay_cambio_not0001_inv)
+     LUT4:I0->O            1   0.561   0.000  TX/estado_and00002_wg_lut<6> (TX/estado_and00002_wg_lut<6>)
+     MUXCY:S->O           42   0.523   1.078  TX/estado_and00002_wg_cy<6> (TX/delay_cambio_and0000)
+     LUT4:I3->O           17   0.561   0.893  TX/estado_and000028 (TX/estado_and0000)
+     FDRE:R                    0.435          TX/estado_0
+    ----------------------------------------
+    Total                      7.103ns (3.465ns logic, 3.638ns route)
+                                       (48.8% logic, 51.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              5.248ns (Levels of Logic = 1)
+  Source:            Servomotor/attach (FF)
+  Destination:       attach (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Servomotor/attach to attach
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.495   0.357  Servomotor/attach (Servomotor/attach)
+     OBUF:I->O                 4.396          attach_OBUF (attach)
+    ----------------------------------------
+    Total                      5.248ns (4.891ns logic, 0.357ns route)
+                                       (93.2% logic, 6.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 11.34 secs
+ 
+--> 
+
+Total memory usage is 252024 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :   31 (   0 filtered)
+

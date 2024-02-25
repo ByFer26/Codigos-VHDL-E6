@@ -1,0 +1,22 @@
+V3 11
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Instanciacion/led.vhd" 2023/03/23.23:04:04 P.20131013
+EN work/led 1683594490 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Instanciacion/led.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/led/Behavioral 1683594491 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Instanciacion/led.vhd" \
+      EN work/led 1683594490
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Instanciacion/switch.vhd" 2023/05/08.19:08:02 P.20131013
+EN work/switch 1683594488 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Instanciacion/switch.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/switch/Behavioral 0 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Instanciacion/switch.vhd" \
+      EN work/switch 1683594488
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Instanciacion/top.vhd" 2023/03/23.23:17:57 P.20131013
+EN work/top 1679635085 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Instanciacion/top.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/top/Behavioral 1679635086 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Instanciacion/top.vhd" \
+      EN work/top 1679635085 CP work/switch CP work/led

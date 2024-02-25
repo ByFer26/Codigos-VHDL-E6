@@ -1,0 +1,580 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf elbertv2.ucf
+
+Design file:              top.ncd
+Physical constraint file: top.pcf
+Device,package,speed:     xc3s50a,tq144,-5 (PRODUCTION 1.42 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 3004 paths analyzed, 203 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   7.021ns.
+--------------------------------------------------------------------------------
+
+Paths for end point RX/caracter_0 (SLICE_X4Y17.CE), 42 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     76.312ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               RX/delay_cambio_5 (FF)
+  Destination:          RX/caracter_0 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      6.913ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.108ns (0.414 - 0.522)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: RX/delay_cambio_5 to RX/caracter_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y20.YQ      Tcko                  0.524   RX/delay_cambio<4>
+                                                       RX/delay_cambio_5
+    SLICE_X19Y23.F4      net (fanout=2)        0.905   RX/delay_cambio<5>
+    SLICE_X19Y23.COUT    Topcyf                1.026   RX/bandera_cmp_eq0001_wg_cy<3>
+                                                       RX/bandera_cmp_eq0001_wg_lut<2>
+                                                       RX/bandera_cmp_eq0001_wg_cy<2>
+                                                       RX/bandera_cmp_eq0001_wg_cy<3>
+    SLICE_X19Y24.CIN     net (fanout=1)        0.000   RX/bandera_cmp_eq0001_wg_cy<3>
+    SLICE_X19Y24.COUT    Tbyp                  0.130   RX/bandera_cmp_eq0001
+                                                       RX/bandera_cmp_eq0001_wg_cy<4>
+                                                       RX/bandera_cmp_eq0001_wg_cy<5>
+    SLICE_X10Y20.G1      net (fanout=5)        1.406   RX/bandera_cmp_eq0001
+    SLICE_X10Y20.Y       Tilo                  0.616   RX/caracter_7_not0001
+                                                       RX/caracter_0_not0001145
+    SLICE_X7Y19.F4       net (fanout=8)        0.618   RX/N01
+    SLICE_X7Y19.X        Tilo                  0.562   RX/caracter_0_not0001
+                                                       RX/caracter_0_not00012
+    SLICE_X4Y17.CE       net (fanout=1)        0.971   RX/caracter_0_not0001
+    SLICE_X4Y17.CLK      Tceck                 0.155   RX/caracter<0>
+                                                       RX/caracter_0
+    -------------------------------------------------  ---------------------------
+    Total                                      6.913ns (3.013ns logic, 3.900ns route)
+                                                       (43.6% logic, 56.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     76.426ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               RX/delay_cambio_3 (FF)
+  Destination:          RX/caracter_0 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      6.816ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.091ns (0.414 - 0.505)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: RX/delay_cambio_3 to RX/caracter_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y19.YQ      Tcko                  0.524   RX/delay_cambio<2>
+                                                       RX/delay_cambio_3
+    SLICE_X19Y22.G1      net (fanout=2)        0.695   RX/delay_cambio<3>
+    SLICE_X19Y22.COUT    Topcyg                1.009   RX/bandera_cmp_eq0001_wg_cy<1>
+                                                       RX/bandera_cmp_eq0001_wg_lut<1>
+                                                       RX/bandera_cmp_eq0001_wg_cy<1>
+    SLICE_X19Y23.CIN     net (fanout=1)        0.000   RX/bandera_cmp_eq0001_wg_cy<1>
+    SLICE_X19Y23.COUT    Tbyp                  0.130   RX/bandera_cmp_eq0001_wg_cy<3>
+                                                       RX/bandera_cmp_eq0001_wg_cy<2>
+                                                       RX/bandera_cmp_eq0001_wg_cy<3>
+    SLICE_X19Y24.CIN     net (fanout=1)        0.000   RX/bandera_cmp_eq0001_wg_cy<3>
+    SLICE_X19Y24.COUT    Tbyp                  0.130   RX/bandera_cmp_eq0001
+                                                       RX/bandera_cmp_eq0001_wg_cy<4>
+                                                       RX/bandera_cmp_eq0001_wg_cy<5>
+    SLICE_X10Y20.G1      net (fanout=5)        1.406   RX/bandera_cmp_eq0001
+    SLICE_X10Y20.Y       Tilo                  0.616   RX/caracter_7_not0001
+                                                       RX/caracter_0_not0001145
+    SLICE_X7Y19.F4       net (fanout=8)        0.618   RX/N01
+    SLICE_X7Y19.X        Tilo                  0.562   RX/caracter_0_not0001
+                                                       RX/caracter_0_not00012
+    SLICE_X4Y17.CE       net (fanout=1)        0.971   RX/caracter_0_not0001
+    SLICE_X4Y17.CLK      Tceck                 0.155   RX/caracter<0>
+                                                       RX/caracter_0
+    -------------------------------------------------  ---------------------------
+    Total                                      6.816ns (3.126ns logic, 3.690ns route)
+                                                       (45.9% logic, 54.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     76.456ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               RX/delay_cambio_6 (FF)
+  Destination:          RX/caracter_0 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      6.769ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.108ns (0.414 - 0.522)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: RX/delay_cambio_6 to RX/caracter_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y21.XQ      Tcko                  0.495   RX/delay_cambio<6>
+                                                       RX/delay_cambio_6
+    SLICE_X19Y22.F1      net (fanout=2)        0.660   RX/delay_cambio<6>
+    SLICE_X19Y22.COUT    Topcyf                1.026   RX/bandera_cmp_eq0001_wg_cy<1>
+                                                       RX/bandera_cmp_eq0001_wg_lut<0>
+                                                       RX/bandera_cmp_eq0001_wg_cy<0>
+                                                       RX/bandera_cmp_eq0001_wg_cy<1>
+    SLICE_X19Y23.CIN     net (fanout=1)        0.000   RX/bandera_cmp_eq0001_wg_cy<1>
+    SLICE_X19Y23.COUT    Tbyp                  0.130   RX/bandera_cmp_eq0001_wg_cy<3>
+                                                       RX/bandera_cmp_eq0001_wg_cy<2>
+                                                       RX/bandera_cmp_eq0001_wg_cy<3>
+    SLICE_X19Y24.CIN     net (fanout=1)        0.000   RX/bandera_cmp_eq0001_wg_cy<3>
+    SLICE_X19Y24.COUT    Tbyp                  0.130   RX/bandera_cmp_eq0001
+                                                       RX/bandera_cmp_eq0001_wg_cy<4>
+                                                       RX/bandera_cmp_eq0001_wg_cy<5>
+    SLICE_X10Y20.G1      net (fanout=5)        1.406   RX/bandera_cmp_eq0001
+    SLICE_X10Y20.Y       Tilo                  0.616   RX/caracter_7_not0001
+                                                       RX/caracter_0_not0001145
+    SLICE_X7Y19.F4       net (fanout=8)        0.618   RX/N01
+    SLICE_X7Y19.X        Tilo                  0.562   RX/caracter_0_not0001
+                                                       RX/caracter_0_not00012
+    SLICE_X4Y17.CE       net (fanout=1)        0.971   RX/caracter_0_not0001
+    SLICE_X4Y17.CLK      Tceck                 0.155   RX/caracter<0>
+                                                       RX/caracter_0
+    -------------------------------------------------  ---------------------------
+    Total                                      6.769ns (3.114ns logic, 3.655ns route)
+                                                       (46.0% logic, 54.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point RX/caracter_4 (SLICE_X6Y15.CE), 42 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     76.449ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               RX/delay_cambio_5 (FF)
+  Destination:          RX/caracter_4 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      6.773ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.111ns (0.411 - 0.522)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: RX/delay_cambio_5 to RX/caracter_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y20.YQ      Tcko                  0.524   RX/delay_cambio<4>
+                                                       RX/delay_cambio_5
+    SLICE_X19Y23.F4      net (fanout=2)        0.905   RX/delay_cambio<5>
+    SLICE_X19Y23.COUT    Topcyf                1.026   RX/bandera_cmp_eq0001_wg_cy<3>
+                                                       RX/bandera_cmp_eq0001_wg_lut<2>
+                                                       RX/bandera_cmp_eq0001_wg_cy<2>
+                                                       RX/bandera_cmp_eq0001_wg_cy<3>
+    SLICE_X19Y24.CIN     net (fanout=1)        0.000   RX/bandera_cmp_eq0001_wg_cy<3>
+    SLICE_X19Y24.COUT    Tbyp                  0.130   RX/bandera_cmp_eq0001
+                                                       RX/bandera_cmp_eq0001_wg_cy<4>
+                                                       RX/bandera_cmp_eq0001_wg_cy<5>
+    SLICE_X10Y20.G1      net (fanout=5)        1.406   RX/bandera_cmp_eq0001
+    SLICE_X10Y20.Y       Tilo                  0.616   RX/caracter_7_not0001
+                                                       RX/caracter_0_not0001145
+    SLICE_X7Y17.F4       net (fanout=8)        0.876   RX/N01
+    SLICE_X7Y17.X        Tilo                  0.562   RX/caracter_4_not0001
+                                                       RX/caracter_4_not00011
+    SLICE_X6Y15.CE       net (fanout=1)        0.573   RX/caracter_4_not0001
+    SLICE_X6Y15.CLK      Tceck                 0.155   RX/caracter<4>
+                                                       RX/caracter_4
+    -------------------------------------------------  ---------------------------
+    Total                                      6.773ns (3.013ns logic, 3.760ns route)
+                                                       (44.5% logic, 55.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     76.563ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               RX/delay_cambio_3 (FF)
+  Destination:          RX/caracter_4 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      6.676ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.094ns (0.411 - 0.505)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: RX/delay_cambio_3 to RX/caracter_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y19.YQ      Tcko                  0.524   RX/delay_cambio<2>
+                                                       RX/delay_cambio_3
+    SLICE_X19Y22.G1      net (fanout=2)        0.695   RX/delay_cambio<3>
+    SLICE_X19Y22.COUT    Topcyg                1.009   RX/bandera_cmp_eq0001_wg_cy<1>
+                                                       RX/bandera_cmp_eq0001_wg_lut<1>
+                                                       RX/bandera_cmp_eq0001_wg_cy<1>
+    SLICE_X19Y23.CIN     net (fanout=1)        0.000   RX/bandera_cmp_eq0001_wg_cy<1>
+    SLICE_X19Y23.COUT    Tbyp                  0.130   RX/bandera_cmp_eq0001_wg_cy<3>
+                                                       RX/bandera_cmp_eq0001_wg_cy<2>
+                                                       RX/bandera_cmp_eq0001_wg_cy<3>
+    SLICE_X19Y24.CIN     net (fanout=1)        0.000   RX/bandera_cmp_eq0001_wg_cy<3>
+    SLICE_X19Y24.COUT    Tbyp                  0.130   RX/bandera_cmp_eq0001
+                                                       RX/bandera_cmp_eq0001_wg_cy<4>
+                                                       RX/bandera_cmp_eq0001_wg_cy<5>
+    SLICE_X10Y20.G1      net (fanout=5)        1.406   RX/bandera_cmp_eq0001
+    SLICE_X10Y20.Y       Tilo                  0.616   RX/caracter_7_not0001
+                                                       RX/caracter_0_not0001145
+    SLICE_X7Y17.F4       net (fanout=8)        0.876   RX/N01
+    SLICE_X7Y17.X        Tilo                  0.562   RX/caracter_4_not0001
+                                                       RX/caracter_4_not00011
+    SLICE_X6Y15.CE       net (fanout=1)        0.573   RX/caracter_4_not0001
+    SLICE_X6Y15.CLK      Tceck                 0.155   RX/caracter<4>
+                                                       RX/caracter_4
+    -------------------------------------------------  ---------------------------
+    Total                                      6.676ns (3.126ns logic, 3.550ns route)
+                                                       (46.8% logic, 53.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     76.593ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               RX/delay_cambio_6 (FF)
+  Destination:          RX/caracter_4 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      6.629ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.111ns (0.411 - 0.522)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: RX/delay_cambio_6 to RX/caracter_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y21.XQ      Tcko                  0.495   RX/delay_cambio<6>
+                                                       RX/delay_cambio_6
+    SLICE_X19Y22.F1      net (fanout=2)        0.660   RX/delay_cambio<6>
+    SLICE_X19Y22.COUT    Topcyf                1.026   RX/bandera_cmp_eq0001_wg_cy<1>
+                                                       RX/bandera_cmp_eq0001_wg_lut<0>
+                                                       RX/bandera_cmp_eq0001_wg_cy<0>
+                                                       RX/bandera_cmp_eq0001_wg_cy<1>
+    SLICE_X19Y23.CIN     net (fanout=1)        0.000   RX/bandera_cmp_eq0001_wg_cy<1>
+    SLICE_X19Y23.COUT    Tbyp                  0.130   RX/bandera_cmp_eq0001_wg_cy<3>
+                                                       RX/bandera_cmp_eq0001_wg_cy<2>
+                                                       RX/bandera_cmp_eq0001_wg_cy<3>
+    SLICE_X19Y24.CIN     net (fanout=1)        0.000   RX/bandera_cmp_eq0001_wg_cy<3>
+    SLICE_X19Y24.COUT    Tbyp                  0.130   RX/bandera_cmp_eq0001
+                                                       RX/bandera_cmp_eq0001_wg_cy<4>
+                                                       RX/bandera_cmp_eq0001_wg_cy<5>
+    SLICE_X10Y20.G1      net (fanout=5)        1.406   RX/bandera_cmp_eq0001
+    SLICE_X10Y20.Y       Tilo                  0.616   RX/caracter_7_not0001
+                                                       RX/caracter_0_not0001145
+    SLICE_X7Y17.F4       net (fanout=8)        0.876   RX/N01
+    SLICE_X7Y17.X        Tilo                  0.562   RX/caracter_4_not0001
+                                                       RX/caracter_4_not00011
+    SLICE_X6Y15.CE       net (fanout=1)        0.573   RX/caracter_4_not0001
+    SLICE_X6Y15.CLK      Tceck                 0.155   RX/caracter<4>
+                                                       RX/caracter_4
+    -------------------------------------------------  ---------------------------
+    Total                                      6.629ns (3.114ns logic, 3.515ns route)
+                                                       (47.0% logic, 53.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point RX/caracter_3 (SLICE_X6Y17.CE), 42 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     76.512ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               RX/delay_cambio_5 (FF)
+  Destination:          RX/caracter_3 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      6.714ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.107ns (0.415 - 0.522)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: RX/delay_cambio_5 to RX/caracter_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y20.YQ      Tcko                  0.524   RX/delay_cambio<4>
+                                                       RX/delay_cambio_5
+    SLICE_X19Y23.F4      net (fanout=2)        0.905   RX/delay_cambio<5>
+    SLICE_X19Y23.COUT    Topcyf                1.026   RX/bandera_cmp_eq0001_wg_cy<3>
+                                                       RX/bandera_cmp_eq0001_wg_lut<2>
+                                                       RX/bandera_cmp_eq0001_wg_cy<2>
+                                                       RX/bandera_cmp_eq0001_wg_cy<3>
+    SLICE_X19Y24.CIN     net (fanout=1)        0.000   RX/bandera_cmp_eq0001_wg_cy<3>
+    SLICE_X19Y24.COUT    Tbyp                  0.130   RX/bandera_cmp_eq0001
+                                                       RX/bandera_cmp_eq0001_wg_cy<4>
+                                                       RX/bandera_cmp_eq0001_wg_cy<5>
+    SLICE_X10Y20.G1      net (fanout=5)        1.406   RX/bandera_cmp_eq0001
+    SLICE_X10Y20.Y       Tilo                  0.616   RX/caracter_7_not0001
+                                                       RX/caracter_0_not0001145
+    SLICE_X7Y17.G4       net (fanout=8)        0.877   RX/N01
+    SLICE_X7Y17.Y        Tilo                  0.561   RX/caracter_4_not0001
+                                                       RX/caracter_3_not00011
+    SLICE_X6Y17.CE       net (fanout=1)        0.514   RX/caracter_3_not0001
+    SLICE_X6Y17.CLK      Tceck                 0.155   RX/caracter<3>
+                                                       RX/caracter_3
+    -------------------------------------------------  ---------------------------
+    Total                                      6.714ns (3.012ns logic, 3.702ns route)
+                                                       (44.9% logic, 55.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     76.626ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               RX/delay_cambio_3 (FF)
+  Destination:          RX/caracter_3 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      6.617ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.090ns (0.415 - 0.505)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: RX/delay_cambio_3 to RX/caracter_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y19.YQ      Tcko                  0.524   RX/delay_cambio<2>
+                                                       RX/delay_cambio_3
+    SLICE_X19Y22.G1      net (fanout=2)        0.695   RX/delay_cambio<3>
+    SLICE_X19Y22.COUT    Topcyg                1.009   RX/bandera_cmp_eq0001_wg_cy<1>
+                                                       RX/bandera_cmp_eq0001_wg_lut<1>
+                                                       RX/bandera_cmp_eq0001_wg_cy<1>
+    SLICE_X19Y23.CIN     net (fanout=1)        0.000   RX/bandera_cmp_eq0001_wg_cy<1>
+    SLICE_X19Y23.COUT    Tbyp                  0.130   RX/bandera_cmp_eq0001_wg_cy<3>
+                                                       RX/bandera_cmp_eq0001_wg_cy<2>
+                                                       RX/bandera_cmp_eq0001_wg_cy<3>
+    SLICE_X19Y24.CIN     net (fanout=1)        0.000   RX/bandera_cmp_eq0001_wg_cy<3>
+    SLICE_X19Y24.COUT    Tbyp                  0.130   RX/bandera_cmp_eq0001
+                                                       RX/bandera_cmp_eq0001_wg_cy<4>
+                                                       RX/bandera_cmp_eq0001_wg_cy<5>
+    SLICE_X10Y20.G1      net (fanout=5)        1.406   RX/bandera_cmp_eq0001
+    SLICE_X10Y20.Y       Tilo                  0.616   RX/caracter_7_not0001
+                                                       RX/caracter_0_not0001145
+    SLICE_X7Y17.G4       net (fanout=8)        0.877   RX/N01
+    SLICE_X7Y17.Y        Tilo                  0.561   RX/caracter_4_not0001
+                                                       RX/caracter_3_not00011
+    SLICE_X6Y17.CE       net (fanout=1)        0.514   RX/caracter_3_not0001
+    SLICE_X6Y17.CLK      Tceck                 0.155   RX/caracter<3>
+                                                       RX/caracter_3
+    -------------------------------------------------  ---------------------------
+    Total                                      6.617ns (3.125ns logic, 3.492ns route)
+                                                       (47.2% logic, 52.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     76.656ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               RX/delay_cambio_6 (FF)
+  Destination:          RX/caracter_3 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      6.570ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.107ns (0.415 - 0.522)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: RX/delay_cambio_6 to RX/caracter_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y21.XQ      Tcko                  0.495   RX/delay_cambio<6>
+                                                       RX/delay_cambio_6
+    SLICE_X19Y22.F1      net (fanout=2)        0.660   RX/delay_cambio<6>
+    SLICE_X19Y22.COUT    Topcyf                1.026   RX/bandera_cmp_eq0001_wg_cy<1>
+                                                       RX/bandera_cmp_eq0001_wg_lut<0>
+                                                       RX/bandera_cmp_eq0001_wg_cy<0>
+                                                       RX/bandera_cmp_eq0001_wg_cy<1>
+    SLICE_X19Y23.CIN     net (fanout=1)        0.000   RX/bandera_cmp_eq0001_wg_cy<1>
+    SLICE_X19Y23.COUT    Tbyp                  0.130   RX/bandera_cmp_eq0001_wg_cy<3>
+                                                       RX/bandera_cmp_eq0001_wg_cy<2>
+                                                       RX/bandera_cmp_eq0001_wg_cy<3>
+    SLICE_X19Y24.CIN     net (fanout=1)        0.000   RX/bandera_cmp_eq0001_wg_cy<3>
+    SLICE_X19Y24.COUT    Tbyp                  0.130   RX/bandera_cmp_eq0001
+                                                       RX/bandera_cmp_eq0001_wg_cy<4>
+                                                       RX/bandera_cmp_eq0001_wg_cy<5>
+    SLICE_X10Y20.G1      net (fanout=5)        1.406   RX/bandera_cmp_eq0001
+    SLICE_X10Y20.Y       Tilo                  0.616   RX/caracter_7_not0001
+                                                       RX/caracter_0_not0001145
+    SLICE_X7Y17.G4       net (fanout=8)        0.877   RX/N01
+    SLICE_X7Y17.Y        Tilo                  0.561   RX/caracter_4_not0001
+                                                       RX/caracter_3_not00011
+    SLICE_X6Y17.CE       net (fanout=1)        0.514   RX/caracter_3_not0001
+    SLICE_X6Y17.CLK      Tceck                 0.155   RX/caracter<3>
+                                                       RX/caracter_3
+    -------------------------------------------------  ---------------------------
+    Total                                      6.570ns (3.113ns logic, 3.457ns route)
+                                                       (47.4% logic, 52.6% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point RX/delay_cambio_4 (SLICE_X17Y20.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.238ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               RX/bandera_FSM_FFd1 (FF)
+  Destination:          RX/delay_cambio_4 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.351ns (Levels of Logic = 0)
+  Clock Path Skew:      0.113ns (0.522 - 0.409)
+  Source Clock:         clk_BUFGP rising at 83.333ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: RX/bandera_FSM_FFd1 to RX/delay_cambio_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y22.YQ      Tcko                  0.477   RX/bandera_FSM_FFd1
+                                                       RX/bandera_FSM_FFd1
+    SLICE_X17Y20.CE      net (fanout=17)       0.874   RX/bandera_FSM_FFd1
+    SLICE_X17Y20.CLK     Tckce       (-Th)     0.000   RX/delay_cambio<4>
+                                                       RX/delay_cambio_4
+    -------------------------------------------------  ---------------------------
+    Total                                      1.351ns (0.477ns logic, 0.874ns route)
+                                                       (35.3% logic, 64.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point RX/delay_cambio_5 (SLICE_X17Y20.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.238ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               RX/bandera_FSM_FFd1 (FF)
+  Destination:          RX/delay_cambio_5 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.351ns (Levels of Logic = 0)
+  Clock Path Skew:      0.113ns (0.522 - 0.409)
+  Source Clock:         clk_BUFGP rising at 83.333ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: RX/bandera_FSM_FFd1 to RX/delay_cambio_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y22.YQ      Tcko                  0.477   RX/bandera_FSM_FFd1
+                                                       RX/bandera_FSM_FFd1
+    SLICE_X17Y20.CE      net (fanout=17)       0.874   RX/bandera_FSM_FFd1
+    SLICE_X17Y20.CLK     Tckce       (-Th)     0.000   RX/delay_cambio<4>
+                                                       RX/delay_cambio_5
+    -------------------------------------------------  ---------------------------
+    Total                                      1.351ns (0.477ns logic, 0.874ns route)
+                                                       (35.3% logic, 64.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point RX/delay_cambio_6 (SLICE_X17Y21.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.238ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               RX/bandera_FSM_FFd1 (FF)
+  Destination:          RX/delay_cambio_6 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.351ns (Levels of Logic = 0)
+  Clock Path Skew:      0.113ns (0.522 - 0.409)
+  Source Clock:         clk_BUFGP rising at 83.333ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: RX/bandera_FSM_FFd1 to RX/delay_cambio_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y22.YQ      Tcko                  0.477   RX/bandera_FSM_FFd1
+                                                       RX/bandera_FSM_FFd1
+    SLICE_X17Y21.CE      net (fanout=17)       0.874   RX/bandera_FSM_FFd1
+    SLICE_X17Y21.CLK     Tckce       (-Th)     0.000   RX/delay_cambio<6>
+                                                       RX/delay_cambio_6
+    -------------------------------------------------  ---------------------------
+    Total                                      1.351ns (0.477ns logic, 0.874ns route)
+                                                       (35.3% logic, 64.7% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 82.005ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 83.333ns
+  Low pulse: 41.666ns
+  Low pulse limit: 0.664ns (Tcl)
+  Physical resource: RX/a/CLK
+  Logical resource: RX/a/CK
+  Location pin: SLICE_X6Y14.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 82.005ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 83.333ns
+  High pulse: 41.666ns
+  High pulse limit: 0.664ns (Tch)
+  Physical resource: RX/a/CLK
+  Logical resource: RX/a/CK
+  Location pin: SLICE_X6Y14.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 82.005ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 83.333ns
+  Low pulse: 41.666ns
+  Low pulse limit: 0.664ns (Tcl)
+  Physical resource: RX/bandera_FSM_FFd1/CLK
+  Logical resource: RX/bandera_FSM_FFd1/CK
+  Location pin: SLICE_X10Y22.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    7.021|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 3004 paths, 0 nets, and 318 connections
+
+Design statistics:
+   Minimum period:   7.021ns{1}   (Maximum frequency: 142.430MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Sun Mar 26 22:05:33 2023 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 188 MB
+
+
+

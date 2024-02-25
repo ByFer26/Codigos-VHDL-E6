@@ -1,0 +1,374 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Reading design: contador.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "contador.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "contador"
+Output Format                      : NGC
+Target Device                      : xc3s50a-5-tq144
+
+---- Source Options
+Top Module Name                    : contador
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contadortriple/contador.vhd" in Library work.
+Entity <contador> compiled.
+Entity <contador> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <contador> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <contador> in library <work> (Architecture <behavioral>).
+Entity <contador> analyzed. Unit <contador> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <contador>.
+    Related source file is "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contadortriple/contador.vhd".
+    Found 16x8-bit ROM for signal <display$mux0001> created at line 83.
+    Found 8-bit register for signal <display>.
+    Found 3-bit register for signal <enable>.
+    Found 4-bit up counter for signal <centenas>.
+    Found 4-bit up counter for signal <decenas>.
+    Found 24-bit up counter for signal <delay_cambio>.
+    Found 16-bit up counter for signal <delay_mux>.
+    Found 4-bit up counter for signal <unidades>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   5 Counter(s).
+	inferred  11 D-type flip-flop(s).
+Unit <contador> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x8-bit ROM                                          : 1
+# Counters                                             : 5
+ 16-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
+ 4-bit up counter                                      : 3
+# Registers                                            : 2
+ 3-bit register                                        : 1
+ 8-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <contador>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_display_mux0001> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <contador> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x8-bit ROM                                          : 1
+# Counters                                             : 5
+ 16-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
+ 4-bit up counter                                      : 3
+# Registers                                            : 11
+ Flip-Flops                                            : 11
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <display_7> (without init value) has a constant value of 1 in block <contador>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <contador> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block contador, actual ratio is 6.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 62
+ Flip-Flops                                            : 62
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : contador.ngr
+Top Level Output File Name         : contador
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 12
+
+Cell Usage :
+# BELS                             : 177
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 38
+#      LUT2                        : 5
+#      LUT2_L                      : 4
+#      LUT3                        : 5
+#      LUT3_D                      : 1
+#      LUT4                        : 28
+#      LUT4_D                      : 3
+#      LUT4_L                      : 1
+#      MUXCY                       : 44
+#      VCC                         : 1
+#      XORCY                       : 40
+# FlipFlops/Latches                : 62
+#      FD                          : 6
+#      FDE                         : 3
+#      FDR                         : 24
+#      FDRE                        : 28
+#      FDS                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 11
+#      OBUF                        : 11
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50atq144-5 
+
+ Number of Slices:                       45  out of    704     6%  
+ Number of Slice Flip Flops:             62  out of   1408     4%  
+ Number of 4 input LUTs:                 91  out of   1408     6%  
+ Number of IOs:                          12
+ Number of bonded IOBs:                  12  out of    108    11%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 62    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 5.343ns (Maximum Frequency: 187.168MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 5.271ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.343ns (frequency: 187.168MHz)
+  Total number of paths / destination ports: 2995 / 146
+-------------------------------------------------------------------------
+Delay:               5.343ns (Levels of Logic = 8)
+  Source:            delay_cambio_8 (FF)
+  Destination:       delay_mux_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: delay_cambio_8 to delay_mux_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.495   0.488  delay_cambio_8 (delay_cambio_8)
+     LUT4:I0->O            1   0.561   0.000  delay_cambio_cmp_eq0000_wg_lut<0> (delay_cambio_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.523   0.000  delay_cambio_cmp_eq0000_wg_cy<0> (delay_cambio_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  delay_cambio_cmp_eq0000_wg_cy<1> (delay_cambio_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  delay_cambio_cmp_eq0000_wg_cy<2> (delay_cambio_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  delay_cambio_cmp_eq0000_wg_cy<3> (delay_cambio_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  delay_cambio_cmp_eq0000_wg_cy<4> (delay_cambio_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O          36   0.065   1.076  delay_cambio_cmp_eq0000_wg_cy<5> (delay_cambio_cmp_eq0000)
+     LUT4:I3->O           16   0.561   0.879  delay_mux_and0000 (delay_mux_and0000)
+     FDRE:R                    0.435          delay_mux_0
+    ----------------------------------------
+    Total                      5.343ns (2.900ns logic, 2.443ns route)
+                                       (54.3% logic, 45.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              5.271ns (Levels of Logic = 1)
+  Source:            enable_2 (FF)
+  Destination:       enable<2> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: enable_2 to enable<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.495   0.380  enable_2 (enable_2)
+     OBUF:I->O                 4.396          enable_2_OBUF (enable<2>)
+    ----------------------------------------
+    Total                      5.271ns (4.891ns logic, 0.380ns route)
+                                       (92.8% logic, 7.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.38 secs
+ 
+--> 
+
+Total memory usage is 252076 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Byron Montenegro\Documents\02.Proyectos_VHDL\uart1\top.ncd
+OUTFILE=C:\Users\Byron Montenegro\Documents\02.Proyectos_VHDL\uart1\top.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s50a-5tq144
+WORKINGDIR=C:\Users\Byron Montenegro\Documents\02.Proyectos_VHDL\uart1
+LICENSE=WebPack
+USER_INFO=212418764_0_0_653

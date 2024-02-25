@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/top</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/GPIO_IN/top.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/01.VHDL/GPIO_IN/top.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/top/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/GPIO_IN/top.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/01.VHDL/GPIO_IN/top.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/entradas</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/GPIO_IN/entradas.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/01.VHDL/GPIO_IN/entradas.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/entradas/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/GPIO_IN/entradas.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/01.VHDL/GPIO_IN/entradas.vhd</arg>&quot;.
+</msg>
+
+</messages>
+

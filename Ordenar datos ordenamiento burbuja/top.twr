@@ -1,0 +1,540 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf elbertv2.ucf
+
+Design file:              top.ncd
+Physical constraint file: top.pcf
+Device,package,speed:     xc3s50a,tq144,-5 (PRODUCTION 1.42 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 9142 paths analyzed, 829 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   8.591ns.
+--------------------------------------------------------------------------------
+
+Paths for end point ordenar/dato_2 (SLICE_X16Y18.CE), 196 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     74.742ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ordenar/lect7_5 (FF)
+  Destination:          ordenar/dato_2 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      8.516ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.075ns (0.234 - 0.309)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ordenar/lect7_5 to ordenar/dato_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y28.XQ      Tcko                  0.521   ordenar/lect7<5>
+                                                       ordenar/lect7_5
+    SLICE_X22Y17.G2      net (fanout=7)        1.546   ordenar/lect7<5>
+    SLICE_X22Y17.COUT    Topcyg                1.127   ordenar/Mcompar_dato_cmp_ge0006_cy<5>
+                                                       ordenar/Mcompar_dato_cmp_ge0006_lut<5>
+                                                       ordenar/Mcompar_dato_cmp_ge0006_cy<5>
+    SLICE_X22Y18.CIN     net (fanout=1)        0.000   ordenar/Mcompar_dato_cmp_ge0006_cy<5>
+    SLICE_X22Y18.COUT    Tbyp                  0.156   ordenar/dato_cmp_ge0006
+                                                       ordenar/Mcompar_dato_cmp_ge0006_cy<6>
+                                                       ordenar/Mcompar_dato_cmp_ge0006_cy<7>
+    SLICE_X15Y16.G2      net (fanout=18)       1.799   ordenar/dato_cmp_ge0006
+    SLICE_X15Y16.Y       Tilo                  0.561   ordenar/N48
+                                                       ordenar/dato_not000125
+    SLICE_X10Y17.F1      net (fanout=1)        0.587   ordenar/dato_not000125
+    SLICE_X10Y17.X       Tilo                  0.601   ordenar/dato_not0001
+                                                       ordenar/dato_not000152
+    SLICE_X16Y18.CE      net (fanout=8)        1.463   ordenar/dato_not0001
+    SLICE_X16Y18.CLK     Tceck                 0.155   ordenar/dato<2>
+                                                       ordenar/dato_2
+    -------------------------------------------------  ---------------------------
+    Total                                      8.516ns (3.121ns logic, 5.395ns route)
+                                                       (36.6% logic, 63.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     74.925ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ordenar/lect7_7 (FF)
+  Destination:          ordenar/dato_2 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      8.375ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.033ns (0.014 - 0.047)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ordenar/lect7_7 to ordenar/dato_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y24.XQ      Tcko                  0.521   ordenar/lect7<7>
+                                                       ordenar/lect7_7
+    SLICE_X22Y18.G1      net (fanout=7)        1.561   ordenar/lect7<7>
+    SLICE_X22Y18.COUT    Topcyg                1.127   ordenar/dato_cmp_ge0006
+                                                       ordenar/Mcompar_dato_cmp_ge0006_lut<7>
+                                                       ordenar/Mcompar_dato_cmp_ge0006_cy<7>
+    SLICE_X15Y16.G2      net (fanout=18)       1.799   ordenar/dato_cmp_ge0006
+    SLICE_X15Y16.Y       Tilo                  0.561   ordenar/N48
+                                                       ordenar/dato_not000125
+    SLICE_X10Y17.F1      net (fanout=1)        0.587   ordenar/dato_not000125
+    SLICE_X10Y17.X       Tilo                  0.601   ordenar/dato_not0001
+                                                       ordenar/dato_not000152
+    SLICE_X16Y18.CE      net (fanout=8)        1.463   ordenar/dato_not0001
+    SLICE_X16Y18.CLK     Tceck                 0.155   ordenar/dato<2>
+                                                       ordenar/dato_2
+    -------------------------------------------------  ---------------------------
+    Total                                      8.375ns (2.965ns logic, 5.410ns route)
+                                                       (35.4% logic, 64.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     75.030ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ordenar/lect7_4 (FF)
+  Destination:          ordenar/dato_2 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      8.230ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.073ns (0.234 - 0.307)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ordenar/lect7_4 to ordenar/dato_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y26.XQ      Tcko                  0.521   ordenar/lect7<4>
+                                                       ordenar/lect7_4
+    SLICE_X22Y17.F2      net (fanout=7)        1.254   ordenar/lect7<4>
+    SLICE_X22Y17.COUT    Topcyf                1.133   ordenar/Mcompar_dato_cmp_ge0006_cy<5>
+                                                       ordenar/Mcompar_dato_cmp_ge0006_lut<4>
+                                                       ordenar/Mcompar_dato_cmp_ge0006_cy<4>
+                                                       ordenar/Mcompar_dato_cmp_ge0006_cy<5>
+    SLICE_X22Y18.CIN     net (fanout=1)        0.000   ordenar/Mcompar_dato_cmp_ge0006_cy<5>
+    SLICE_X22Y18.COUT    Tbyp                  0.156   ordenar/dato_cmp_ge0006
+                                                       ordenar/Mcompar_dato_cmp_ge0006_cy<6>
+                                                       ordenar/Mcompar_dato_cmp_ge0006_cy<7>
+    SLICE_X15Y16.G2      net (fanout=18)       1.799   ordenar/dato_cmp_ge0006
+    SLICE_X15Y16.Y       Tilo                  0.561   ordenar/N48
+                                                       ordenar/dato_not000125
+    SLICE_X10Y17.F1      net (fanout=1)        0.587   ordenar/dato_not000125
+    SLICE_X10Y17.X       Tilo                  0.601   ordenar/dato_not0001
+                                                       ordenar/dato_not000152
+    SLICE_X16Y18.CE      net (fanout=8)        1.463   ordenar/dato_not0001
+    SLICE_X16Y18.CLK     Tceck                 0.155   ordenar/dato<2>
+                                                       ordenar/dato_2
+    -------------------------------------------------  ---------------------------
+    Total                                      8.230ns (3.127ns logic, 5.103ns route)
+                                                       (38.0% logic, 62.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ordenar/dato_4 (SLICE_X16Y20.CE), 196 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     74.816ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ordenar/lect7_5 (FF)
+  Destination:          ordenar/dato_4 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      8.455ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.062ns (0.247 - 0.309)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ordenar/lect7_5 to ordenar/dato_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y28.XQ      Tcko                  0.521   ordenar/lect7<5>
+                                                       ordenar/lect7_5
+    SLICE_X22Y17.G2      net (fanout=7)        1.546   ordenar/lect7<5>
+    SLICE_X22Y17.COUT    Topcyg                1.127   ordenar/Mcompar_dato_cmp_ge0006_cy<5>
+                                                       ordenar/Mcompar_dato_cmp_ge0006_lut<5>
+                                                       ordenar/Mcompar_dato_cmp_ge0006_cy<5>
+    SLICE_X22Y18.CIN     net (fanout=1)        0.000   ordenar/Mcompar_dato_cmp_ge0006_cy<5>
+    SLICE_X22Y18.COUT    Tbyp                  0.156   ordenar/dato_cmp_ge0006
+                                                       ordenar/Mcompar_dato_cmp_ge0006_cy<6>
+                                                       ordenar/Mcompar_dato_cmp_ge0006_cy<7>
+    SLICE_X15Y16.G2      net (fanout=18)       1.799   ordenar/dato_cmp_ge0006
+    SLICE_X15Y16.Y       Tilo                  0.561   ordenar/N48
+                                                       ordenar/dato_not000125
+    SLICE_X10Y17.F1      net (fanout=1)        0.587   ordenar/dato_not000125
+    SLICE_X10Y17.X       Tilo                  0.601   ordenar/dato_not0001
+                                                       ordenar/dato_not000152
+    SLICE_X16Y20.CE      net (fanout=8)        1.402   ordenar/dato_not0001
+    SLICE_X16Y20.CLK     Tceck                 0.155   ordenar/dato<4>
+                                                       ordenar/dato_4
+    -------------------------------------------------  ---------------------------
+    Total                                      8.455ns (3.121ns logic, 5.334ns route)
+                                                       (36.9% logic, 63.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     74.999ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ordenar/lect7_7 (FF)
+  Destination:          ordenar/dato_4 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      8.314ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.020ns (0.027 - 0.047)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ordenar/lect7_7 to ordenar/dato_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y24.XQ      Tcko                  0.521   ordenar/lect7<7>
+                                                       ordenar/lect7_7
+    SLICE_X22Y18.G1      net (fanout=7)        1.561   ordenar/lect7<7>
+    SLICE_X22Y18.COUT    Topcyg                1.127   ordenar/dato_cmp_ge0006
+                                                       ordenar/Mcompar_dato_cmp_ge0006_lut<7>
+                                                       ordenar/Mcompar_dato_cmp_ge0006_cy<7>
+    SLICE_X15Y16.G2      net (fanout=18)       1.799   ordenar/dato_cmp_ge0006
+    SLICE_X15Y16.Y       Tilo                  0.561   ordenar/N48
+                                                       ordenar/dato_not000125
+    SLICE_X10Y17.F1      net (fanout=1)        0.587   ordenar/dato_not000125
+    SLICE_X10Y17.X       Tilo                  0.601   ordenar/dato_not0001
+                                                       ordenar/dato_not000152
+    SLICE_X16Y20.CE      net (fanout=8)        1.402   ordenar/dato_not0001
+    SLICE_X16Y20.CLK     Tceck                 0.155   ordenar/dato<4>
+                                                       ordenar/dato_4
+    -------------------------------------------------  ---------------------------
+    Total                                      8.314ns (2.965ns logic, 5.349ns route)
+                                                       (35.7% logic, 64.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     75.104ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ordenar/lect7_4 (FF)
+  Destination:          ordenar/dato_4 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      8.169ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.060ns (0.247 - 0.307)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ordenar/lect7_4 to ordenar/dato_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y26.XQ      Tcko                  0.521   ordenar/lect7<4>
+                                                       ordenar/lect7_4
+    SLICE_X22Y17.F2      net (fanout=7)        1.254   ordenar/lect7<4>
+    SLICE_X22Y17.COUT    Topcyf                1.133   ordenar/Mcompar_dato_cmp_ge0006_cy<5>
+                                                       ordenar/Mcompar_dato_cmp_ge0006_lut<4>
+                                                       ordenar/Mcompar_dato_cmp_ge0006_cy<4>
+                                                       ordenar/Mcompar_dato_cmp_ge0006_cy<5>
+    SLICE_X22Y18.CIN     net (fanout=1)        0.000   ordenar/Mcompar_dato_cmp_ge0006_cy<5>
+    SLICE_X22Y18.COUT    Tbyp                  0.156   ordenar/dato_cmp_ge0006
+                                                       ordenar/Mcompar_dato_cmp_ge0006_cy<6>
+                                                       ordenar/Mcompar_dato_cmp_ge0006_cy<7>
+    SLICE_X15Y16.G2      net (fanout=18)       1.799   ordenar/dato_cmp_ge0006
+    SLICE_X15Y16.Y       Tilo                  0.561   ordenar/N48
+                                                       ordenar/dato_not000125
+    SLICE_X10Y17.F1      net (fanout=1)        0.587   ordenar/dato_not000125
+    SLICE_X10Y17.X       Tilo                  0.601   ordenar/dato_not0001
+                                                       ordenar/dato_not000152
+    SLICE_X16Y20.CE      net (fanout=8)        1.402   ordenar/dato_not0001
+    SLICE_X16Y20.CLK     Tceck                 0.155   ordenar/dato<4>
+                                                       ordenar/dato_4
+    -------------------------------------------------  ---------------------------
+    Total                                      8.169ns (3.127ns logic, 5.042ns route)
+                                                       (38.3% logic, 61.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ordenar/dato_6 (SLICE_X15Y23.CE), 196 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     75.054ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ordenar/lect7_5 (FF)
+  Destination:          ordenar/dato_6 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      8.158ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.121ns (0.415 - 0.536)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ordenar/lect7_5 to ordenar/dato_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y28.XQ      Tcko                  0.521   ordenar/lect7<5>
+                                                       ordenar/lect7_5
+    SLICE_X22Y17.G2      net (fanout=7)        1.546   ordenar/lect7<5>
+    SLICE_X22Y17.COUT    Topcyg                1.127   ordenar/Mcompar_dato_cmp_ge0006_cy<5>
+                                                       ordenar/Mcompar_dato_cmp_ge0006_lut<5>
+                                                       ordenar/Mcompar_dato_cmp_ge0006_cy<5>
+    SLICE_X22Y18.CIN     net (fanout=1)        0.000   ordenar/Mcompar_dato_cmp_ge0006_cy<5>
+    SLICE_X22Y18.COUT    Tbyp                  0.156   ordenar/dato_cmp_ge0006
+                                                       ordenar/Mcompar_dato_cmp_ge0006_cy<6>
+                                                       ordenar/Mcompar_dato_cmp_ge0006_cy<7>
+    SLICE_X15Y16.G2      net (fanout=18)       1.799   ordenar/dato_cmp_ge0006
+    SLICE_X15Y16.Y       Tilo                  0.561   ordenar/N48
+                                                       ordenar/dato_not000125
+    SLICE_X10Y17.F1      net (fanout=1)        0.587   ordenar/dato_not000125
+    SLICE_X10Y17.X       Tilo                  0.601   ordenar/dato_not0001
+                                                       ordenar/dato_not000152
+    SLICE_X15Y23.CE      net (fanout=8)        1.105   ordenar/dato_not0001
+    SLICE_X15Y23.CLK     Tceck                 0.155   ordenar/dato<6>
+                                                       ordenar/dato_6
+    -------------------------------------------------  ---------------------------
+    Total                                      8.158ns (3.121ns logic, 5.037ns route)
+                                                       (38.3% logic, 61.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     75.199ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ordenar/lect7_7 (FF)
+  Destination:          ordenar/dato_6 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      8.017ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.117ns (0.415 - 0.532)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ordenar/lect7_7 to ordenar/dato_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y24.XQ      Tcko                  0.521   ordenar/lect7<7>
+                                                       ordenar/lect7_7
+    SLICE_X22Y18.G1      net (fanout=7)        1.561   ordenar/lect7<7>
+    SLICE_X22Y18.COUT    Topcyg                1.127   ordenar/dato_cmp_ge0006
+                                                       ordenar/Mcompar_dato_cmp_ge0006_lut<7>
+                                                       ordenar/Mcompar_dato_cmp_ge0006_cy<7>
+    SLICE_X15Y16.G2      net (fanout=18)       1.799   ordenar/dato_cmp_ge0006
+    SLICE_X15Y16.Y       Tilo                  0.561   ordenar/N48
+                                                       ordenar/dato_not000125
+    SLICE_X10Y17.F1      net (fanout=1)        0.587   ordenar/dato_not000125
+    SLICE_X10Y17.X       Tilo                  0.601   ordenar/dato_not0001
+                                                       ordenar/dato_not000152
+    SLICE_X15Y23.CE      net (fanout=8)        1.105   ordenar/dato_not0001
+    SLICE_X15Y23.CLK     Tceck                 0.155   ordenar/dato<6>
+                                                       ordenar/dato_6
+    -------------------------------------------------  ---------------------------
+    Total                                      8.017ns (2.965ns logic, 5.052ns route)
+                                                       (37.0% logic, 63.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     75.305ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ordenar/lect7_6 (FF)
+  Destination:          ordenar/dato_6 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      7.906ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.122ns (0.415 - 0.537)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ordenar/lect7_6 to ordenar/dato_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y29.XQ      Tcko                  0.521   ordenar/lect7<6>
+                                                       ordenar/lect7_6
+    SLICE_X22Y18.F2      net (fanout=7)        1.444   ordenar/lect7<6>
+    SLICE_X22Y18.COUT    Topcyf                1.133   ordenar/dato_cmp_ge0006
+                                                       ordenar/Mcompar_dato_cmp_ge0006_lut<6>
+                                                       ordenar/Mcompar_dato_cmp_ge0006_cy<6>
+                                                       ordenar/Mcompar_dato_cmp_ge0006_cy<7>
+    SLICE_X15Y16.G2      net (fanout=18)       1.799   ordenar/dato_cmp_ge0006
+    SLICE_X15Y16.Y       Tilo                  0.561   ordenar/N48
+                                                       ordenar/dato_not000125
+    SLICE_X10Y17.F1      net (fanout=1)        0.587   ordenar/dato_not000125
+    SLICE_X10Y17.X       Tilo                  0.601   ordenar/dato_not0001
+                                                       ordenar/dato_not000152
+    SLICE_X15Y23.CE      net (fanout=8)        1.105   ordenar/dato_not0001
+    SLICE_X15Y23.CLK     Tceck                 0.155   ordenar/dato<6>
+                                                       ordenar/dato_6
+    -------------------------------------------------  ---------------------------
+    Total                                      7.906ns (2.971ns logic, 4.935ns route)
+                                                       (37.6% logic, 62.4% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point ordenar/lect9_7 (SLICE_X15Y22.F3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.001ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               ordenar/dato_7 (FF)
+  Destination:          ordenar/lect9_7 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.049ns (Levels of Logic = 1)
+  Clock Path Skew:      0.048ns (0.261 - 0.213)
+  Source Clock:         clk_BUFGP rising at 83.333ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: ordenar/dato_7 to ordenar/lect9_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y21.XQ      Tcko                  0.396   ordenar/dato<7>
+                                                       ordenar/dato_7
+    SLICE_X15Y22.F3      net (fanout=1)        0.247   ordenar/dato<7>
+    SLICE_X15Y22.CLK     Tckf        (-Th)    -0.406   ordenar/lect9<7>
+                                                       ordenar/Mmux_lect9_mux0000241
+                                                       ordenar/lect9_7
+    -------------------------------------------------  ---------------------------
+    Total                                      1.049ns (0.802ns logic, 0.247ns route)
+                                                       (76.5% logic, 23.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ordenar/lect9_2 (SLICE_X17Y20.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.032ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               ordenar/dato_2 (FF)
+  Destination:          ordenar/lect9_2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.049ns (Levels of Logic = 1)
+  Clock Path Skew:      0.017ns (0.031 - 0.014)
+  Source Clock:         clk_BUFGP rising at 83.333ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: ordenar/dato_2 to ordenar/lect9_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y18.XQ      Tcko                  0.417   ordenar/dato<2>
+                                                       ordenar/dato_2
+    SLICE_X17Y20.F4      net (fanout=1)        0.226   ordenar/dato<2>
+    SLICE_X17Y20.CLK     Tckf        (-Th)    -0.406   ordenar/lect9<2>
+                                                       ordenar/Mmux_lect9_mux000091
+                                                       ordenar/lect9_2
+    -------------------------------------------------  ---------------------------
+    Total                                      1.049ns (0.823ns logic, 0.226ns route)
+                                                       (78.5% logic, 21.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ordenar/lect9_6 (SLICE_X15Y22.G4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.047ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               ordenar/dato_6 (FF)
+  Destination:          ordenar/lect9_6 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.051ns (Levels of Logic = 1)
+  Clock Path Skew:      0.004ns (0.029 - 0.025)
+  Source Clock:         clk_BUFGP rising at 83.333ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: ordenar/dato_6 to ordenar/lect9_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y23.XQ      Tcko                  0.396   ordenar/dato<6>
+                                                       ordenar/dato_6
+    SLICE_X15Y22.G4      net (fanout=1)        0.249   ordenar/dato<6>
+    SLICE_X15Y22.CLK     Tckg        (-Th)    -0.406   ordenar/lect9<7>
+                                                       ordenar/Mmux_lect9_mux0000211
+                                                       ordenar/lect9_6
+    -------------------------------------------------  ---------------------------
+    Total                                      1.051ns (0.802ns logic, 0.249ns route)
+                                                       (76.3% logic, 23.7% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 82.005ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 83.333ns
+  Low pulse: 41.666ns
+  Low pulse limit: 0.664ns (Tcl)
+  Physical resource: ordenar/cambio<0>/CLK
+  Logical resource: ordenar/cambio_0/CK
+  Location pin: SLICE_X22Y0.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 82.005ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 83.333ns
+  High pulse: 41.666ns
+  High pulse limit: 0.664ns (Tch)
+  Physical resource: ordenar/cambio<0>/CLK
+  Logical resource: ordenar/cambio_0/CK
+  Location pin: SLICE_X22Y0.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 82.005ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 83.333ns
+  Low pulse: 41.666ns
+  Low pulse limit: 0.664ns (Tcl)
+  Physical resource: ordenar/cambio<0>/CLK
+  Logical resource: ordenar/cambio_1/CK
+  Location pin: SLICE_X22Y0.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    8.591|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 9142 paths, 0 nets, and 1650 connections
+
+Design statistics:
+   Minimum period:   8.591ns{1}   (Maximum frequency: 116.401MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Sun Apr 09 21:51:44 2023 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 188 MB
+
+
+

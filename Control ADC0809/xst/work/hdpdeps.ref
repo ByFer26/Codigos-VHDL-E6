@@ -1,0 +1,22 @@
+V3 11
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Multiplexor/multiplexor.vhd" 2023/03/23.21:52:36 P.20131013
+EN work/multiplexor 1679629961 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Multiplexor/multiplexor.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/multiplexor/Behavioral 1679629962 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Multiplexor/multiplexor.vhd" \
+      EN work/multiplexor 1679629961
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Multiplexor/reloj.vhd" 2023/03/23.21:51:01 P.20131013
+EN work/reloj 1679629963 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Multiplexor/reloj.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/reloj/Behavioral 1679629964 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Multiplexor/reloj.vhd" \
+      EN work/reloj 1679629963
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Multiplexor/top.vhd" 2023/03/23.21:51:01 P.20131013
+EN work/top 1679629965 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Multiplexor/top.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/top/Behavioral 1679629966 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Multiplexor/top.vhd" \
+      EN work/top 1679629965 CP work/multiplexor CP work/reloj

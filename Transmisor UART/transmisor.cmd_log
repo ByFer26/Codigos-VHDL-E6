@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart/transmisor.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart/transmisor.syr" 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart/transmisor.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart/transmisor.syr" 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart/transmisor.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart/transmisor.syr" 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart/transmisor.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart/transmisor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-5 "transmisor.ngc" transmisor.ngd  
+map -intstyle ise -p xc3s50a-tq144-5 -cm area -ir off -pr off -c 100 -o transmisor_map.ncd transmisor.ngd transmisor.pcf 
+par -w -intstyle ise -ol high -t 1 transmisor_map.ncd transmisor.ncd transmisor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml transmisor.twx transmisor.ncd -o transmisor.twr transmisor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml transmisor_preroute.twx transmisor_map.ncd -o transmisor_preroute.twr transmisor.pcf 

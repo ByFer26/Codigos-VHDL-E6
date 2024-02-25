@@ -1,0 +1,392 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc3s50a-5-tq144
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Multiplexor/multiplexor.vhd" in Library work.
+Entity <multiplexor> compiled.
+Entity <multiplexor> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Multiplexor/reloj.vhd" in Library work.
+Entity <reloj> compiled.
+Entity <reloj> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Multiplexor/top.vhd" in Library work.
+Entity <top> compiled.
+Entity <top> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <multiplexor> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <reloj> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top> in library <work> (Architecture <behavioral>).
+Entity <top> analyzed. Unit <top> generated.
+
+Analyzing Entity <multiplexor> in library <work> (Architecture <Behavioral>).
+Entity <multiplexor> analyzed. Unit <multiplexor> generated.
+
+Analyzing Entity <reloj> in library <work> (Architecture <Behavioral>).
+Entity <reloj> analyzed. Unit <reloj> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <multiplexor>.
+    Related source file is "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Multiplexor/multiplexor.vhd".
+    Found 16x5-bit ROM for signal <$rom0000>.
+    Found 2-bit register for signal <OE>.
+    Found 3-bit register for signal <Canales>.
+    Found 24-bit up counter for signal <cambio>.
+    Found 5-bit up counter for signal <ciclo>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred   5 D-type flip-flop(s).
+Unit <multiplexor> synthesized.
+
+
+Synthesizing Unit <reloj>.
+    Related source file is "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Multiplexor/reloj.vhd".
+    Found 1-bit register for signal <OSC>.
+    Found 24-bit up counter for signal <cambio>.
+    Found 1-bit register for signal <ciclo<0>>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+Unit <reloj> synthesized.
+
+
+Synthesizing Unit <top>.
+    Related source file is "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Multiplexor/top.vhd".
+Unit <top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x5-bit ROM                                          : 1
+# Counters                                             : 3
+ 24-bit up counter                                     : 2
+ 5-bit up counter                                      : 1
+# Registers                                            : 4
+ 1-bit register                                        : 2
+ 2-bit register                                        : 1
+ 3-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x5-bit ROM                                          : 1
+# Counters                                             : 3
+ 24-bit up counter                                     : 2
+ 5-bit up counter                                      : 1
+# Registers                                            : 7
+ Flip-Flops                                            : 7
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <top> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 5.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 60
+ Flip-Flops                                            : 60
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top.ngr
+Top Level Output File Name         : top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 7
+
+Cell Usage :
+# BELS                             : 181
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 46
+#      LUT2                        : 3
+#      LUT3                        : 4
+#      LUT3_D                      : 1
+#      LUT4                        : 14
+#      MUXCY                       : 58
+#      VCC                         : 1
+#      XORCY                       : 48
+# FlipFlops/Latches                : 60
+#      FDE                         : 1
+#      FDR                         : 54
+#      FDRE                        : 5
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 6
+#      OBUF                        : 6
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50atq144-5 
+
+ Number of Slices:                       39  out of    704     5%  
+ Number of Slice Flip Flops:             60  out of   1408     4%  
+ Number of 4 input LUTs:                 73  out of   1408     5%  
+ Number of IOs:                           7
+ Number of bonded IOBs:                   7  out of    108     6%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 60    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 5.000ns (Maximum Frequency: 199.986MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 5.248ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.000ns (frequency: 199.986MHz)
+  Total number of paths / destination ports: 2074 / 124
+-------------------------------------------------------------------------
+Delay:               5.000ns (Levels of Logic = 8)
+  Source:            multiplexor/cambio_9 (FF)
+  Destination:       multiplexor/ciclo_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: multiplexor/cambio_9 to multiplexor/ciclo_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.495   0.488  multiplexor/cambio_9 (multiplexor/cambio_9)
+     LUT4:I0->O            1   0.561   0.000  multiplexor/ciclo_and00001_wg_lut<0> (multiplexor/ciclo_and00001_wg_lut<0>)
+     MUXCY:S->O            1   0.523   0.000  multiplexor/ciclo_and00001_wg_cy<0> (multiplexor/ciclo_and00001_wg_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  multiplexor/ciclo_and00001_wg_cy<1> (multiplexor/ciclo_and00001_wg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  multiplexor/ciclo_and00001_wg_cy<2> (multiplexor/ciclo_and00001_wg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  multiplexor/ciclo_and00001_wg_cy<3> (multiplexor/ciclo_and00001_wg_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  multiplexor/ciclo_and00001_wg_cy<4> (multiplexor/ciclo_and00001_wg_cy<4>)
+     MUXCY:CI->O          30   0.065   1.074  multiplexor/ciclo_and00001_wg_cy<5> (multiplexor/cambio_cmp_eq0000)
+     LUT4:I3->O            5   0.561   0.538  multiplexor/ciclo_and00001 (multiplexor/ciclo_and0000)
+     FDRE:R                    0.435          multiplexor/ciclo_0
+    ----------------------------------------
+    Total                      5.000ns (2.900ns logic, 2.100ns route)
+                                       (58.0% logic, 42.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              5.248ns (Levels of Logic = 1)
+  Source:            reloj/OSC (FF)
+  Destination:       OSC (PAD)
+  Source Clock:      clk rising
+
+  Data Path: reloj/OSC to OSC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.495   0.357  reloj/OSC (reloj/OSC)
+     OBUF:I->O                 4.396          OSC_OBUF (OSC)
+    ----------------------------------------
+    Total                      5.248ns (4.891ns logic, 0.357ns route)
+                                       (93.2% logic, 6.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 15.03 secs
+ 
+--> 
+
+Total memory usage is 251968 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,16 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Mar 23 21:53:18 2023
+//! **************************************************************************
+
+SCHEMATIC START;
+CONFIG VCCAUX = "3.3";
+COMP "clk" LOCATE = SITE "P129" LEVEL 1;
+COMP "OSC" LOCATE = SITE "P51" LEVEL 1;
+COMP "Canales<0>" LOCATE = SITE "P46" LEVEL 1;
+COMP "Canales<1>" LOCATE = SITE "P47" LEVEL 1;
+COMP "Canales<2>" LOCATE = SITE "P48" LEVEL 1;
+COMP "OE<0>" LOCATE = SITE "P49" LEVEL 1;
+COMP "OE<1>" LOCATE = SITE "P50" LEVEL 1;
+NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+SCHEMATIC END;
+

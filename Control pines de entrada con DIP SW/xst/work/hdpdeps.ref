@@ -1,0 +1,17 @@
+V3 9
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/01.VHDL/GPIO_IN/entradas.vhd" 2023/03/09.16:13:17 P.20131013
+EN work/entradas 1708839748 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/01.VHDL/GPIO_IN/entradas.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/entradas/Behavioral 1708839749 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/01.VHDL/GPIO_IN/entradas.vhd" \
+      EN work/entradas 1708839748
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/01.VHDL/GPIO_IN/top.vhd" 2023/03/09.16:43:24 P.20131013
+EN work/top 1708839750 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/01.VHDL/GPIO_IN/top.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/top/Behavioral 1708839751 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/01.VHDL/GPIO_IN/top.vhd" \
+      EN work/top 1708839750 CP work/entradas
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/GPIO_IN/entradas.vhd" 2023/03/09.16:13:17 P.20131013
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/GPIO_IN/top.vhd" 2023/03/09.16:43:24 P.20131013

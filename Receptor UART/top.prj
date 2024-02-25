@@ -1,0 +1,3 @@
+vhdl work "recepcion.vhd"
+vhdl work "led_test.vhd"
+vhdl work "top.vhd"

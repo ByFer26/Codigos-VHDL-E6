@@ -1,0 +1,7 @@
+vhdl work "TX.vhd"
+vhdl work "Servomotor.vhd"
+vhdl work "RX.vhd"
+vhdl work "Reloj_ADC.vhd"
+vhdl work "Reloj.vhd"
+vhdl work "Multiplexor.vhd"
+vhdl work "Top.vhd"

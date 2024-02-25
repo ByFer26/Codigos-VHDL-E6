@@ -1,0 +1,8 @@
+EN led_test NULL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/led_test.vhd" sub00/vhpl06 1679889849
+EN recepcion NULL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/recepcion.vhd" sub00/vhpl00 1678596854
+AR recepcion behavioral "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/recepcion.vhd" sub00/vhpl01 1678596855
+AR rx behavioral "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/recepcion.vhd" sub00/vhpl03 1679889848
+EN top NULL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/top.vhd" sub00/vhpl04 1679889851
+EN rx NULL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/recepcion.vhd" sub00/vhpl02 1679889847
+AR led_test behavioral "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/led_test.vhd" sub00/vhpl07 1679889850
+AR top behavioral "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/uart1/top.vhd" sub00/vhpl05 1679889852

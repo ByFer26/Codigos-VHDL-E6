@@ -1,0 +1,3 @@
+vhdl work "DPSWS.vhd"
+vhdl work "contador09.vhd"
+vhdl work "Top.vhd"

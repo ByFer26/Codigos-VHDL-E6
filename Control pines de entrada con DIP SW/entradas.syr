@@ -1,0 +1,380 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Reading design: entradas.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "entradas.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "entradas"
+Output Format                      : NGC
+Target Device                      : xc3s50a-5-tq144
+
+---- Source Options
+Top Module Name                    : entradas
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/GPIO_IN/entradas.vhd" in Library work.
+Entity <entradas> compiled.
+Entity <entradas> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <entradas> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <entradas> in library <work> (Architecture <Behavioral>).
+Entity <entradas> analyzed. Unit <entradas> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <entradas>.
+    Related source file is "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/GPIO_IN/entradas.vhd".
+    Found 8-bit register for signal <salida>.
+    Found 24-bit up counter for signal <delay_cambio>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   8 D-type flip-flop(s).
+Unit <entradas> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 24-bit up counter                                     : 1
+# Registers                                            : 1
+ 8-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 24-bit up counter                                     : 1
+# Registers                                            : 8
+ Flip-Flops                                            : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <entradas> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block entradas, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 32
+ Flip-Flops                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : entradas.ngr
+Top Level Output File Name         : entradas
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 17
+
+Cell Usage :
+# BELS                             : 85
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 23
+#      LUT4                        : 6
+#      MUXCY                       : 29
+#      VCC                         : 1
+#      XORCY                       : 24
+# FlipFlops/Latches                : 32
+#      FDE                         : 8
+#      FDR                         : 24
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 16
+#      IBUF                        : 8
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50atq144-5 
+
+ Number of Slices:                       20  out of    704     2%  
+ Number of Slice Flip Flops:             32  out of   1408     2%  
+ Number of 4 input LUTs:                 30  out of   1408     2%  
+ Number of IOs:                          17
+ Number of bonded IOBs:                  17  out of    108    15%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 32    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 4.283ns (Maximum Frequency: 233.484MHz)
+   Minimum input arrival time before clock: 1.378ns
+   Maximum output required time after clock: 5.248ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.283ns (frequency: 233.484MHz)
+  Total number of paths / destination ports: 1068 / 56
+-------------------------------------------------------------------------
+Delay:               4.283ns (Levels of Logic = 24)
+  Source:            delay_cambio_1 (FF)
+  Destination:       delay_cambio_23 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: delay_cambio_1 to delay_cambio_23
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.495   0.488  delay_cambio_1 (delay_cambio_1)
+     LUT1:I0->O            1   0.561   0.000  Mcount_delay_cambio_cy<1>_rt (Mcount_delay_cambio_cy<1>_rt)
+     MUXCY:S->O            1   0.523   0.000  Mcount_delay_cambio_cy<1> (Mcount_delay_cambio_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_delay_cambio_cy<2> (Mcount_delay_cambio_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_delay_cambio_cy<3> (Mcount_delay_cambio_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_delay_cambio_cy<4> (Mcount_delay_cambio_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_delay_cambio_cy<5> (Mcount_delay_cambio_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_delay_cambio_cy<6> (Mcount_delay_cambio_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_delay_cambio_cy<7> (Mcount_delay_cambio_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_delay_cambio_cy<8> (Mcount_delay_cambio_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_delay_cambio_cy<9> (Mcount_delay_cambio_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_delay_cambio_cy<10> (Mcount_delay_cambio_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_delay_cambio_cy<11> (Mcount_delay_cambio_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_delay_cambio_cy<12> (Mcount_delay_cambio_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_delay_cambio_cy<13> (Mcount_delay_cambio_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_delay_cambio_cy<14> (Mcount_delay_cambio_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_delay_cambio_cy<15> (Mcount_delay_cambio_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_delay_cambio_cy<16> (Mcount_delay_cambio_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_delay_cambio_cy<17> (Mcount_delay_cambio_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_delay_cambio_cy<18> (Mcount_delay_cambio_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_delay_cambio_cy<19> (Mcount_delay_cambio_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_delay_cambio_cy<20> (Mcount_delay_cambio_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_delay_cambio_cy<21> (Mcount_delay_cambio_cy<21>)
+     MUXCY:CI->O           0   0.065   0.000  Mcount_delay_cambio_cy<22> (Mcount_delay_cambio_cy<22>)
+     XORCY:CI->O           1   0.654   0.000  Mcount_delay_cambio_xor<23> (Result<23>)
+     FDR:D                     0.197          delay_cambio_23
+    ----------------------------------------
+    Total                      4.283ns (3.795ns logic, 0.488ns route)
+                                       (88.6% logic, 11.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              1.378ns (Levels of Logic = 1)
+  Source:            entrada<0> (PAD)
+  Destination:       salida_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: entrada<0> to salida_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.824   0.357  entrada_0_IBUF (entrada_0_IBUF)
+     FDE:D                     0.197          salida_0
+    ----------------------------------------
+    Total                      1.378ns (1.021ns logic, 0.357ns route)
+                                       (74.1% logic, 25.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              5.248ns (Levels of Logic = 1)
+  Source:            salida_7 (FF)
+  Destination:       salida<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: salida_7 to salida<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.495   0.357  salida_7 (salida_7)
+     OBUF:I->O                 4.396          salida_7_OBUF (salida<7>)
+    ----------------------------------------
+    Total                      5.248ns (4.891ns logic, 0.357ns route)
+                                       (93.2% logic, 6.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.94 secs
+ 
+--> 
+
+Total memory usage is 252028 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

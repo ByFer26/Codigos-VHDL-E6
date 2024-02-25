@@ -1,0 +1,45 @@
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.syr" 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-5 "contador09.ngc" contador09.ngd  
+map -intstyle ise -p xc3s50a-tq144-5 -cm area -ir off -pr off -c 100 -o contador09_map.ncd contador09.ngd contador09.pcf 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.syr" 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-5 "contador09.ngc" contador09.ngd  
+map -intstyle ise -p xc3s50a-tq144-5 -cm area -ir off -pr off -c 100 -o contador09_map.ncd contador09.ngd contador09.pcf 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-5 "contador09.ngc" contador09.ngd  
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.syr" 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.syr" 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-5 "contador09.ngc" contador09.ngd  
+map -intstyle ise -p xc3s50a-tq144-5 -cm area -ir off -pr off -c 100 -o contador09_map.ncd contador09.ngd contador09.pcf 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.syr" 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.syr" 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.syr" 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.syr" 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.syr" 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-5 "contador09.ngc" contador09.ngd  
+map -intstyle ise -p xc3s50a-tq144-5 -cm area -ir off -pr off -c 100 -o contador09_map.ncd contador09.ngd contador09.pcf 
+par -w -intstyle ise -ol high -t 1 contador09_map.ncd contador09.ncd contador09.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml contador09.twx contador09.ncd -o contador09.twr contador09.pcf 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-5 "contador09.ngc" contador09.ngd  
+map -intstyle ise -p xc3s50a-tq144-5 -cm area -ir off -pr off -c 100 -o contador09_map.ncd contador09.ngd contador09.pcf 
+par -w -intstyle ise -ol high -t 1 contador09_map.ncd contador09.ncd contador09.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml contador09.twx contador09.ncd -o contador09.twr contador09.pcf 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-5 "contador09.ngc" contador09.ngd  
+map -intstyle ise -p xc3s50a-tq144-5 -cm area -ir off -pr off -c 100 -o contador09_map.ncd contador09.ngd contador09.pcf 
+par -w -intstyle ise -ol high -t 1 contador09_map.ncd contador09.ncd contador09.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml contador09.twx contador09.ncd -o contador09.twr contador09.pcf 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-5 "contador09.ngc" contador09.ngd  
+map -intstyle ise -p xc3s50a-tq144-5 -cm area -ir off -pr off -c 100 -o contador09_map.ncd contador09.ngd contador09.pcf 
+par -w -intstyle ise -ol high -t 1 contador09_map.ncd contador09.ncd contador09.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml contador09.twx contador09.ncd -o contador09.twr contador09.pcf 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/contador/contador09.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-5 "contador09.ngc" contador09.ngd  
+map -intstyle ise -p xc3s50a-tq144-5 -cm area -ir off -pr off -c 100 -o contador09_map.ncd contador09.ngd contador09.pcf 
+par -w -intstyle ise -ol high -t 1 contador09_map.ncd contador09.ncd contador09.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml contador09.twx contador09.ncd -o contador09.twr contador09.pcf 

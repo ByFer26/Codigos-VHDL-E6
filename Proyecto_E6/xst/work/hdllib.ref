@@ -1,0 +1,14 @@
+EN reloj NULL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Reloj.vhd" sub00/vhpl04 1680760007
+AR tx behavioral "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/TX.vhd" sub00/vhpl09 1680760010
+AR servomotor behavioral "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Servomotor.vhd" sub00/vhpl11 1680760012
+EN reloj_adc NULL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Reloj_ADC.vhd" sub00/vhpl12 1680760013
+EN multiplexor NULL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Multiplexor.vhd" sub00/vhpl02 1680760005
+AR multiplexor behavioral "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Multiplexor.vhd" sub00/vhpl03 1680760006
+AR reloj_adc behavioral "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Reloj_ADC.vhd" sub00/vhpl13 1680760014
+AR rx behavioral "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/RX.vhd" sub00/vhpl01 1680760004
+EN top NULL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Top.vhd" sub00/vhpl06 1680760015
+EN rx NULL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/RX.vhd" sub00/vhpl00 1680760003
+AR reloj behavioral "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Reloj.vhd" sub00/vhpl05 1680760008
+EN servomotor NULL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Servomotor.vhd" sub00/vhpl10 1680760011
+EN tx NULL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/TX.vhd" sub00/vhpl08 1680760009
+AR top behavioral "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Top.vhd" sub00/vhpl07 1680760016

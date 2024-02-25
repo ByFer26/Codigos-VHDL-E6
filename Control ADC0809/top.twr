@@ -1,0 +1,528 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf elbertv2.ucf
+
+Design file:              top.ncd
+Physical constraint file: top.pcf
+Device,package,speed:     xc3s50a,tq144,-5 (PRODUCTION 1.42 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 2074 paths analyzed, 206 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   5.377ns.
+--------------------------------------------------------------------------------
+
+Paths for end point multiplexor/ciclo_0 (SLICE_X11Y4.SR), 29 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     77.956ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               multiplexor/cambio_17 (FF)
+  Destination:          multiplexor/ciclo_0 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.363ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.014ns (0.246 - 0.260)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: multiplexor/cambio_17 to multiplexor/ciclo_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y20.YQ      Tcko                  0.524   multiplexor/cambio<16>
+                                                       multiplexor/cambio_17
+    SLICE_X11Y18.G3      net (fanout=2)        1.052   multiplexor/cambio<17>
+    SLICE_X11Y18.COUT    Topcyg                1.009   multiplexor/ciclo_and00001_wg_cy<3>
+                                                       multiplexor/ciclo_and00001_wg_lut<3>
+                                                       multiplexor/ciclo_and00001_wg_cy<3>
+    SLICE_X11Y19.CIN     net (fanout=1)        0.000   multiplexor/ciclo_and00001_wg_cy<3>
+    SLICE_X11Y19.COUT    Tbyp                  0.130   multiplexor/cambio_cmp_eq0000
+                                                       multiplexor/ciclo_and00001_wg_cy<4>
+                                                       multiplexor/ciclo_and00001_wg_cy<5>
+    SLICE_X11Y5.F3       net (fanout=16)       1.308   multiplexor/cambio_cmp_eq0000
+    SLICE_X11Y5.X        Tilo                  0.562   multiplexor/ciclo_and0000
+                                                       multiplexor/ciclo_and00001
+    SLICE_X11Y4.SR       net (fanout=3)        0.345   multiplexor/ciclo_and0000
+    SLICE_X11Y4.CLK      Tsrck                 0.433   multiplexor/ciclo<0>
+                                                       multiplexor/ciclo_0
+    -------------------------------------------------  ---------------------------
+    Total                                      5.363ns (2.658ns logic, 2.705ns route)
+                                                       (49.6% logic, 50.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.974ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               multiplexor/cambio_1 (FF)
+  Destination:          multiplexor/ciclo_0 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.360ns (Levels of Logic = 2)
+  Clock Path Skew:      0.001ns (0.246 - 0.245)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: multiplexor/cambio_1 to multiplexor/ciclo_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y12.YQ      Tcko                  0.524   multiplexor/cambio<0>
+                                                       multiplexor/cambio_1
+    SLICE_X11Y19.F1      net (fanout=2)        1.162   multiplexor/cambio<1>
+    SLICE_X11Y19.COUT    Topcyf                1.026   multiplexor/cambio_cmp_eq0000
+                                                       multiplexor/ciclo_and00001_wg_lut<4>
+                                                       multiplexor/ciclo_and00001_wg_cy<4>
+                                                       multiplexor/ciclo_and00001_wg_cy<5>
+    SLICE_X11Y5.F3       net (fanout=16)       1.308   multiplexor/cambio_cmp_eq0000
+    SLICE_X11Y5.X        Tilo                  0.562   multiplexor/ciclo_and0000
+                                                       multiplexor/ciclo_and00001
+    SLICE_X11Y4.SR       net (fanout=3)        0.345   multiplexor/ciclo_and0000
+    SLICE_X11Y4.CLK      Tsrck                 0.433   multiplexor/ciclo<0>
+                                                       multiplexor/ciclo_0
+    -------------------------------------------------  ---------------------------
+    Total                                      5.360ns (2.545ns logic, 2.815ns route)
+                                                       (47.5% logic, 52.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     78.044ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               multiplexor/cambio_10 (FF)
+  Destination:          multiplexor/ciclo_0 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.293ns (Levels of Logic = 4)
+  Clock Path Skew:      0.004ns (0.246 - 0.242)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: multiplexor/cambio_10 to multiplexor/ciclo_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y17.XQ      Tcko                  0.495   multiplexor/cambio<10>
+                                                       multiplexor/cambio_10
+    SLICE_X11Y17.G1      net (fanout=2)        0.881   multiplexor/cambio<10>
+    SLICE_X11Y17.COUT    Topcyg                1.009   multiplexor/ciclo_and00001_wg_cy<1>
+                                                       multiplexor/ciclo_and00001_wg_lut<1>
+                                                       multiplexor/ciclo_and00001_wg_cy<1>
+    SLICE_X11Y18.CIN     net (fanout=1)        0.000   multiplexor/ciclo_and00001_wg_cy<1>
+    SLICE_X11Y18.COUT    Tbyp                  0.130   multiplexor/ciclo_and00001_wg_cy<3>
+                                                       multiplexor/ciclo_and00001_wg_cy<2>
+                                                       multiplexor/ciclo_and00001_wg_cy<3>
+    SLICE_X11Y19.CIN     net (fanout=1)        0.000   multiplexor/ciclo_and00001_wg_cy<3>
+    SLICE_X11Y19.COUT    Tbyp                  0.130   multiplexor/cambio_cmp_eq0000
+                                                       multiplexor/ciclo_and00001_wg_cy<4>
+                                                       multiplexor/ciclo_and00001_wg_cy<5>
+    SLICE_X11Y5.F3       net (fanout=16)       1.308   multiplexor/cambio_cmp_eq0000
+    SLICE_X11Y5.X        Tilo                  0.562   multiplexor/ciclo_and0000
+                                                       multiplexor/ciclo_and00001
+    SLICE_X11Y4.SR       net (fanout=3)        0.345   multiplexor/ciclo_and0000
+    SLICE_X11Y4.CLK      Tsrck                 0.433   multiplexor/ciclo<0>
+                                                       multiplexor/ciclo_0
+    -------------------------------------------------  ---------------------------
+    Total                                      5.293ns (2.759ns logic, 2.534ns route)
+                                                       (52.1% logic, 47.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point multiplexor/ciclo_1 (SLICE_X11Y4.SR), 29 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     77.956ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               multiplexor/cambio_17 (FF)
+  Destination:          multiplexor/ciclo_1 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.363ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.014ns (0.246 - 0.260)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: multiplexor/cambio_17 to multiplexor/ciclo_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y20.YQ      Tcko                  0.524   multiplexor/cambio<16>
+                                                       multiplexor/cambio_17
+    SLICE_X11Y18.G3      net (fanout=2)        1.052   multiplexor/cambio<17>
+    SLICE_X11Y18.COUT    Topcyg                1.009   multiplexor/ciclo_and00001_wg_cy<3>
+                                                       multiplexor/ciclo_and00001_wg_lut<3>
+                                                       multiplexor/ciclo_and00001_wg_cy<3>
+    SLICE_X11Y19.CIN     net (fanout=1)        0.000   multiplexor/ciclo_and00001_wg_cy<3>
+    SLICE_X11Y19.COUT    Tbyp                  0.130   multiplexor/cambio_cmp_eq0000
+                                                       multiplexor/ciclo_and00001_wg_cy<4>
+                                                       multiplexor/ciclo_and00001_wg_cy<5>
+    SLICE_X11Y5.F3       net (fanout=16)       1.308   multiplexor/cambio_cmp_eq0000
+    SLICE_X11Y5.X        Tilo                  0.562   multiplexor/ciclo_and0000
+                                                       multiplexor/ciclo_and00001
+    SLICE_X11Y4.SR       net (fanout=3)        0.345   multiplexor/ciclo_and0000
+    SLICE_X11Y4.CLK      Tsrck                 0.433   multiplexor/ciclo<0>
+                                                       multiplexor/ciclo_1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.363ns (2.658ns logic, 2.705ns route)
+                                                       (49.6% logic, 50.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.974ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               multiplexor/cambio_1 (FF)
+  Destination:          multiplexor/ciclo_1 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.360ns (Levels of Logic = 2)
+  Clock Path Skew:      0.001ns (0.246 - 0.245)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: multiplexor/cambio_1 to multiplexor/ciclo_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y12.YQ      Tcko                  0.524   multiplexor/cambio<0>
+                                                       multiplexor/cambio_1
+    SLICE_X11Y19.F1      net (fanout=2)        1.162   multiplexor/cambio<1>
+    SLICE_X11Y19.COUT    Topcyf                1.026   multiplexor/cambio_cmp_eq0000
+                                                       multiplexor/ciclo_and00001_wg_lut<4>
+                                                       multiplexor/ciclo_and00001_wg_cy<4>
+                                                       multiplexor/ciclo_and00001_wg_cy<5>
+    SLICE_X11Y5.F3       net (fanout=16)       1.308   multiplexor/cambio_cmp_eq0000
+    SLICE_X11Y5.X        Tilo                  0.562   multiplexor/ciclo_and0000
+                                                       multiplexor/ciclo_and00001
+    SLICE_X11Y4.SR       net (fanout=3)        0.345   multiplexor/ciclo_and0000
+    SLICE_X11Y4.CLK      Tsrck                 0.433   multiplexor/ciclo<0>
+                                                       multiplexor/ciclo_1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.360ns (2.545ns logic, 2.815ns route)
+                                                       (47.5% logic, 52.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     78.044ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               multiplexor/cambio_10 (FF)
+  Destination:          multiplexor/ciclo_1 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.293ns (Levels of Logic = 4)
+  Clock Path Skew:      0.004ns (0.246 - 0.242)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: multiplexor/cambio_10 to multiplexor/ciclo_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y17.XQ      Tcko                  0.495   multiplexor/cambio<10>
+                                                       multiplexor/cambio_10
+    SLICE_X11Y17.G1      net (fanout=2)        0.881   multiplexor/cambio<10>
+    SLICE_X11Y17.COUT    Topcyg                1.009   multiplexor/ciclo_and00001_wg_cy<1>
+                                                       multiplexor/ciclo_and00001_wg_lut<1>
+                                                       multiplexor/ciclo_and00001_wg_cy<1>
+    SLICE_X11Y18.CIN     net (fanout=1)        0.000   multiplexor/ciclo_and00001_wg_cy<1>
+    SLICE_X11Y18.COUT    Tbyp                  0.130   multiplexor/ciclo_and00001_wg_cy<3>
+                                                       multiplexor/ciclo_and00001_wg_cy<2>
+                                                       multiplexor/ciclo_and00001_wg_cy<3>
+    SLICE_X11Y19.CIN     net (fanout=1)        0.000   multiplexor/ciclo_and00001_wg_cy<3>
+    SLICE_X11Y19.COUT    Tbyp                  0.130   multiplexor/cambio_cmp_eq0000
+                                                       multiplexor/ciclo_and00001_wg_cy<4>
+                                                       multiplexor/ciclo_and00001_wg_cy<5>
+    SLICE_X11Y5.F3       net (fanout=16)       1.308   multiplexor/cambio_cmp_eq0000
+    SLICE_X11Y5.X        Tilo                  0.562   multiplexor/ciclo_and0000
+                                                       multiplexor/ciclo_and00001
+    SLICE_X11Y4.SR       net (fanout=3)        0.345   multiplexor/ciclo_and0000
+    SLICE_X11Y4.CLK      Tsrck                 0.433   multiplexor/ciclo<0>
+                                                       multiplexor/ciclo_1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.293ns (2.759ns logic, 2.534ns route)
+                                                       (52.1% logic, 47.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point multiplexor/ciclo_3 (SLICE_X10Y5.SR), 29 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     78.056ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               multiplexor/cambio_17 (FF)
+  Destination:          multiplexor/ciclo_3 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.263ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.014ns (0.246 - 0.260)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: multiplexor/cambio_17 to multiplexor/ciclo_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y20.YQ      Tcko                  0.524   multiplexor/cambio<16>
+                                                       multiplexor/cambio_17
+    SLICE_X11Y18.G3      net (fanout=2)        1.052   multiplexor/cambio<17>
+    SLICE_X11Y18.COUT    Topcyg                1.009   multiplexor/ciclo_and00001_wg_cy<3>
+                                                       multiplexor/ciclo_and00001_wg_lut<3>
+                                                       multiplexor/ciclo_and00001_wg_cy<3>
+    SLICE_X11Y19.CIN     net (fanout=1)        0.000   multiplexor/ciclo_and00001_wg_cy<3>
+    SLICE_X11Y19.COUT    Tbyp                  0.130   multiplexor/cambio_cmp_eq0000
+                                                       multiplexor/ciclo_and00001_wg_cy<4>
+                                                       multiplexor/ciclo_and00001_wg_cy<5>
+    SLICE_X11Y5.F3       net (fanout=16)       1.308   multiplexor/cambio_cmp_eq0000
+    SLICE_X11Y5.X        Tilo                  0.562   multiplexor/ciclo_and0000
+                                                       multiplexor/ciclo_and00001
+    SLICE_X10Y5.SR       net (fanout=3)        0.245   multiplexor/ciclo_and0000
+    SLICE_X10Y5.CLK      Tsrck                 0.433   multiplexor/ciclo<3>
+                                                       multiplexor/ciclo_3
+    -------------------------------------------------  ---------------------------
+    Total                                      5.263ns (2.658ns logic, 2.605ns route)
+                                                       (50.5% logic, 49.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     78.074ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               multiplexor/cambio_1 (FF)
+  Destination:          multiplexor/ciclo_3 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.260ns (Levels of Logic = 2)
+  Clock Path Skew:      0.001ns (0.246 - 0.245)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: multiplexor/cambio_1 to multiplexor/ciclo_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y12.YQ      Tcko                  0.524   multiplexor/cambio<0>
+                                                       multiplexor/cambio_1
+    SLICE_X11Y19.F1      net (fanout=2)        1.162   multiplexor/cambio<1>
+    SLICE_X11Y19.COUT    Topcyf                1.026   multiplexor/cambio_cmp_eq0000
+                                                       multiplexor/ciclo_and00001_wg_lut<4>
+                                                       multiplexor/ciclo_and00001_wg_cy<4>
+                                                       multiplexor/ciclo_and00001_wg_cy<5>
+    SLICE_X11Y5.F3       net (fanout=16)       1.308   multiplexor/cambio_cmp_eq0000
+    SLICE_X11Y5.X        Tilo                  0.562   multiplexor/ciclo_and0000
+                                                       multiplexor/ciclo_and00001
+    SLICE_X10Y5.SR       net (fanout=3)        0.245   multiplexor/ciclo_and0000
+    SLICE_X10Y5.CLK      Tsrck                 0.433   multiplexor/ciclo<3>
+                                                       multiplexor/ciclo_3
+    -------------------------------------------------  ---------------------------
+    Total                                      5.260ns (2.545ns logic, 2.715ns route)
+                                                       (48.4% logic, 51.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     78.144ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               multiplexor/cambio_10 (FF)
+  Destination:          multiplexor/ciclo_3 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.193ns (Levels of Logic = 4)
+  Clock Path Skew:      0.004ns (0.246 - 0.242)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: multiplexor/cambio_10 to multiplexor/ciclo_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y17.XQ      Tcko                  0.495   multiplexor/cambio<10>
+                                                       multiplexor/cambio_10
+    SLICE_X11Y17.G1      net (fanout=2)        0.881   multiplexor/cambio<10>
+    SLICE_X11Y17.COUT    Topcyg                1.009   multiplexor/ciclo_and00001_wg_cy<1>
+                                                       multiplexor/ciclo_and00001_wg_lut<1>
+                                                       multiplexor/ciclo_and00001_wg_cy<1>
+    SLICE_X11Y18.CIN     net (fanout=1)        0.000   multiplexor/ciclo_and00001_wg_cy<1>
+    SLICE_X11Y18.COUT    Tbyp                  0.130   multiplexor/ciclo_and00001_wg_cy<3>
+                                                       multiplexor/ciclo_and00001_wg_cy<2>
+                                                       multiplexor/ciclo_and00001_wg_cy<3>
+    SLICE_X11Y19.CIN     net (fanout=1)        0.000   multiplexor/ciclo_and00001_wg_cy<3>
+    SLICE_X11Y19.COUT    Tbyp                  0.130   multiplexor/cambio_cmp_eq0000
+                                                       multiplexor/ciclo_and00001_wg_cy<4>
+                                                       multiplexor/ciclo_and00001_wg_cy<5>
+    SLICE_X11Y5.F3       net (fanout=16)       1.308   multiplexor/cambio_cmp_eq0000
+    SLICE_X11Y5.X        Tilo                  0.562   multiplexor/ciclo_and0000
+                                                       multiplexor/ciclo_and00001
+    SLICE_X10Y5.SR       net (fanout=3)        0.245   multiplexor/ciclo_and0000
+    SLICE_X10Y5.CLK      Tsrck                 0.433   multiplexor/ciclo<3>
+                                                       multiplexor/ciclo_3
+    -------------------------------------------------  ---------------------------
+    Total                                      5.193ns (2.759ns logic, 2.434ns route)
+                                                       (53.1% logic, 46.9% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point multiplexor/Canales_1 (SLICE_X10Y2.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.094ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               multiplexor/ciclo_1 (FF)
+  Destination:          multiplexor/Canales_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.107ns (Levels of Logic = 1)
+  Clock Path Skew:      0.013ns (0.053 - 0.040)
+  Source Clock:         clk_BUFGP rising at 83.333ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: multiplexor/ciclo_1 to multiplexor/Canales_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y4.YQ       Tcko                  0.419   multiplexor/ciclo<0>
+                                                       multiplexor/ciclo_1
+    SLICE_X10Y2.F4       net (fanout=5)        0.250   multiplexor/ciclo<1>
+    SLICE_X10Y2.CLK      Tckf        (-Th)    -0.438   multiplexor/Canales<1>
+                                                       multiplexor/Mrom__rom000031
+                                                       multiplexor/Canales_1
+    -------------------------------------------------  ---------------------------
+    Total                                      1.107ns (0.857ns logic, 0.250ns route)
+                                                       (77.4% logic, 22.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point reloj/ciclo_0 (SLICE_X14Y4.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.121ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               reloj/ciclo_0 (FF)
+  Destination:          reloj/ciclo_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.121ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 83.333ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: reloj/ciclo_0 to reloj/ciclo_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y4.YQ       Tcko                  0.477   reloj/ciclo<0>
+                                                       reloj/ciclo_0
+    SLICE_X14Y4.BY       net (fanout=2)        0.507   reloj/ciclo<0>
+    SLICE_X14Y4.CLK      Tckdi       (-Th)    -0.137   reloj/ciclo<0>
+                                                       reloj/ciclo_0
+    -------------------------------------------------  ---------------------------
+    Total                                      1.121ns (0.614ns logic, 0.507ns route)
+                                                       (54.8% logic, 45.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point multiplexor/Canales_0 (SLICE_X10Y2.G3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.133ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               multiplexor/ciclo_0 (FF)
+  Destination:          multiplexor/Canales_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.146ns (Levels of Logic = 1)
+  Clock Path Skew:      0.013ns (0.053 - 0.040)
+  Source Clock:         clk_BUFGP rising at 83.333ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: multiplexor/ciclo_0 to multiplexor/Canales_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y4.XQ       Tcko                  0.396   multiplexor/ciclo<0>
+                                                       multiplexor/ciclo_0
+    SLICE_X10Y2.G3       net (fanout=6)        0.300   multiplexor/ciclo<0>
+    SLICE_X10Y2.CLK      Tckg        (-Th)    -0.450   multiplexor/Canales<1>
+                                                       multiplexor/Mrom__rom000021
+                                                       multiplexor/Canales_0
+    -------------------------------------------------  ---------------------------
+    Total                                      1.146ns (0.846ns logic, 0.300ns route)
+                                                       (73.8% logic, 26.2% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 82.005ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 83.333ns
+  Low pulse: 41.666ns
+  Low pulse limit: 0.664ns (Tcl)
+  Physical resource: reloj/cambio<0>/CLK
+  Logical resource: reloj/cambio_0/CK
+  Location pin: SLICE_X14Y12.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 82.005ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 83.333ns
+  High pulse: 41.666ns
+  High pulse limit: 0.664ns (Tch)
+  Physical resource: reloj/cambio<0>/CLK
+  Logical resource: reloj/cambio_0/CK
+  Location pin: SLICE_X14Y12.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 82.005ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 83.333ns
+  Low pulse: 41.666ns
+  Low pulse limit: 0.664ns (Tcl)
+  Physical resource: reloj/cambio<0>/CLK
+  Logical resource: reloj/cambio_1/CK
+  Location pin: SLICE_X14Y12.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    5.377|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 2074 paths, 0 nets, and 222 connections
+
+Design statistics:
+   Minimum period:   5.377ns{1}   (Maximum frequency: 185.977MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Thu Mar 23 21:53:39 2023 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 188 MB
+
+
+

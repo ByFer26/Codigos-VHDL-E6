@@ -1,0 +1,456 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc3s50a-5-tq144
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/ordenar_datos/ordenar.vhd" in Library work.
+Entity <ordenar> compiled.
+Entity <ordenar> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/ordenar_datos/top.vhd" in Library work.
+Architecture behavioral of Entity top is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ordenar> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top> in library <work> (Architecture <behavioral>).
+Entity <top> analyzed. Unit <top> generated.
+
+Analyzing Entity <ordenar> in library <work> (Architecture <Behavioral>).
+INFO:Xst:2679 - Register <aux1> in unit <ordenar> has a constant value of 01011001 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <aux2> in unit <ordenar> has a constant value of 01110010 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <aux3> in unit <ordenar> has a constant value of 11111111 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <aux4> in unit <ordenar> has a constant value of 01100001 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <aux5> in unit <ordenar> has a constant value of 01000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <aux6> in unit <ordenar> has a constant value of 01000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <aux7> in unit <ordenar> has a constant value of 11111000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <aux8> in unit <ordenar> has a constant value of 00011011 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <aux9> in unit <ordenar> has a constant value of 00010000 during circuit operation. The register is replaced by logic.
+Entity <ordenar> analyzed. Unit <ordenar> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ordenar>.
+    Related source file is "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/ordenar_datos/ordenar.vhd".
+WARNING:Xst:646 - Signal <posicion> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit register for signal <mayor>.
+    Found 24-bit up counter for signal <cambio>.
+    Found 4-bit up counter for signal <ciclo>.
+    Found 8-bit register for signal <dato>.
+    Found 8-bit comparator greatequal for signal <dato$cmp_ge0000> created at line 62.
+    Found 8-bit comparator greatequal for signal <dato$cmp_ge0001> created at line 70.
+    Found 8-bit comparator greatequal for signal <dato$cmp_ge0002> created at line 78.
+    Found 8-bit comparator greatequal for signal <dato$cmp_ge0003> created at line 86.
+    Found 8-bit comparator greatequal for signal <dato$cmp_ge0004> created at line 94.
+    Found 8-bit comparator greatequal for signal <dato$cmp_ge0005> created at line 102.
+    Found 8-bit comparator greatequal for signal <dato$cmp_ge0006> created at line 110.
+    Found 8-bit comparator greatequal for signal <dato$cmp_ge0007> created at line 118.
+    Found 8-bit comparator less for signal <dato$cmp_lt0000> created at line 118.
+    Found 8-bit comparator less for signal <dato$cmp_lt0001> created at line 110.
+    Found 8-bit comparator less for signal <dato$cmp_lt0002> created at line 102.
+    Found 8-bit comparator less for signal <dato$cmp_lt0003> created at line 94.
+    Found 8-bit comparator less for signal <dato$cmp_lt0004> created at line 86.
+    Found 8-bit comparator less for signal <dato$cmp_lt0005> created at line 78.
+    Found 8-bit comparator less for signal <dato$cmp_lt0006> created at line 70.
+    Found 8-bit register for signal <lect1>.
+    Found 8-bit comparator less for signal <lect1$cmp_lt0000> created at line 62.
+    Found 8-bit 13-to-1 multiplexer for signal <lect1$mux0000> created at line 51.
+    Found 8-bit register for signal <lect2>.
+    Found 8-bit 13-to-1 multiplexer for signal <lect2$mux0000> created at line 51.
+    Found 8-bit register for signal <lect3>.
+    Found 8-bit 13-to-1 multiplexer for signal <lect3$mux0000> created at line 51.
+    Found 8-bit register for signal <lect4>.
+    Found 8-bit 13-to-1 multiplexer for signal <lect4$mux0000> created at line 51.
+    Found 8-bit register for signal <lect5>.
+    Found 8-bit 13-to-1 multiplexer for signal <lect5$mux0000> created at line 51.
+    Found 8-bit register for signal <lect6>.
+    Found 8-bit 13-to-1 multiplexer for signal <lect6$mux0000> created at line 51.
+    Found 8-bit register for signal <lect7>.
+    Found 8-bit 13-to-1 multiplexer for signal <lect7$mux0000> created at line 51.
+    Found 8-bit register for signal <lect8>.
+    Found 8-bit 13-to-1 multiplexer for signal <lect8$mux0000> created at line 51.
+    Found 8-bit register for signal <lect9>.
+    Found 8-bit 13-to-1 multiplexer for signal <lect9$mux0000> created at line 51.
+    Found 8-bit 13-to-1 multiplexer for signal <mayor$mux0000> created at line 51.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  88 D-type flip-flop(s).
+	inferred  16 Comparator(s).
+	inferred  80 Multiplexer(s).
+Unit <ordenar> synthesized.
+
+
+Synthesizing Unit <top>.
+    Related source file is "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/ordenar_datos/top.vhd".
+Unit <top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 24-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 11
+ 8-bit register                                        : 11
+# Comparators                                          : 16
+ 8-bit comparator greatequal                           : 8
+ 8-bit comparator less                                 : 8
+# Multiplexers                                         : 10
+ 8-bit 13-to-1 multiplexer                             : 10
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 24-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 88
+ Flip-Flops                                            : 88
+# Comparators                                          : 16
+ 8-bit comparator greatequal                           : 8
+ 8-bit comparator less                                 : 8
+# Multiplexers                                         : 10
+ 8-bit 13-to-1 multiplexer                             : 10
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <top> ...
+
+Optimizing unit <ordenar> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 36.
+FlipFlop ordenar/lect1_1 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 117
+ Flip-Flops                                            : 117
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top.ngr
+Top Level Output File Name         : top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 10
+
+Cell Usage :
+# BELS                             : 629
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 23
+#      LUT2                        : 70
+#      LUT2_D                      : 2
+#      LUT2_L                      : 11
+#      LUT3                        : 72
+#      LUT3_D                      : 3
+#      LUT3_L                      : 8
+#      LUT4                        : 222
+#      LUT4_D                      : 4
+#      LUT4_L                      : 15
+#      MUXCY                       : 93
+#      MUXF5                       : 77
+#      VCC                         : 1
+#      XORCY                       : 24
+# FlipFlops/Latches                : 117
+#      FDE                         : 81
+#      FDRE                        : 28
+#      FDRS                        : 8
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 1
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50atq144-5 
+
+ Number of Slices:                      223  out of    704    31%  
+ Number of Slice Flip Flops:            117  out of   1408     8%  
+ Number of 4 input LUTs:                433  out of   1408    30%  
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of    108     9%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 117   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 6.639ns (Maximum Frequency: 150.630MHz)
+   Minimum input arrival time before clock: 4.009ns
+   Maximum output required time after clock: 5.429ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.639ns (frequency: 150.630MHz)
+  Total number of paths / destination ports: 9145 / 165
+-------------------------------------------------------------------------
+Delay:               6.639ns (Levels of Logic = 12)
+  Source:            ordenar/lect3_0 (FF)
+  Destination:       ordenar/dato_7 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: ordenar/lect3_0 to ordenar/dato_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              7   0.495   0.710  ordenar/lect3_0 (ordenar/lect3_0)
+     LUT2:I0->O            1   0.561   0.000  ordenar/Mcompar_dato_cmp_ge0002_lut<0> (ordenar/Mcompar_dato_cmp_ge0002_lut<0>)
+     MUXCY:S->O            1   0.523   0.000  ordenar/Mcompar_dato_cmp_ge0002_cy<0> (ordenar/Mcompar_dato_cmp_ge0002_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  ordenar/Mcompar_dato_cmp_ge0002_cy<1> (ordenar/Mcompar_dato_cmp_ge0002_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  ordenar/Mcompar_dato_cmp_ge0002_cy<2> (ordenar/Mcompar_dato_cmp_ge0002_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  ordenar/Mcompar_dato_cmp_ge0002_cy<3> (ordenar/Mcompar_dato_cmp_ge0002_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  ordenar/Mcompar_dato_cmp_ge0002_cy<4> (ordenar/Mcompar_dato_cmp_ge0002_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  ordenar/Mcompar_dato_cmp_ge0002_cy<5> (ordenar/Mcompar_dato_cmp_ge0002_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  ordenar/Mcompar_dato_cmp_ge0002_cy<6> (ordenar/Mcompar_dato_cmp_ge0002_cy<6>)
+     MUXCY:CI->O          25   0.179   1.073  ordenar/Mcompar_dato_cmp_ge0002_cy<7> (ordenar/dato_cmp_ge0002)
+     LUT4:I3->O            1   0.561   0.380  ordenar/dato_mux0000<7>35 (ordenar/dato_mux0000<7>35)
+     LUT4:I2->O            1   0.561   0.357  ordenar/dato_mux0000<7>61 (ordenar/dato_mux0000<7>61)
+     MUXF5:S->O            1   0.652   0.000  ordenar/dato_mux0000<7>114 (ordenar/dato_mux0000<7>)
+     FDE:D                     0.197          ordenar/dato_7
+    ----------------------------------------
+    Total                      6.639ns (4.119ns logic, 2.520ns route)
+                                       (62.0% logic, 38.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 145 / 145
+-------------------------------------------------------------------------
+Offset:              4.009ns (Levels of Logic = 3)
+  Source:            pulsador (PAD)
+  Destination:       ordenar/dato_7 (FF)
+  Destination Clock: clk rising
+
+  Data Path: pulsador to ordenar/dato_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   0.824   0.840  pulsador_IBUF (pulsador_IBUF)
+     LUT4:I2->O            1   0.561   0.423  ordenar/dato_not000149 (ordenar/dato_not000149)
+     LUT4:I1->O            8   0.562   0.643  ordenar/dato_not000152 (ordenar/dato_not0001)
+     FDE:CE                    0.156          ordenar/dato_0
+    ----------------------------------------
+    Total                      4.009ns (2.103ns logic, 1.906ns route)
+                                       (52.5% logic, 47.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              5.429ns (Levels of Logic = 1)
+  Source:            ordenar/mayor_0 (FF)
+  Destination:       mayor<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: ordenar/mayor_0 to mayor<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRS:C->Q             5   0.495   0.538  ordenar/mayor_0 (ordenar/mayor_0)
+     OBUF:I->O                 4.396          mayor_0_OBUF (mayor<0>)
+    ----------------------------------------
+    Total                      5.429ns (4.891ns logic, 0.538ns route)
+                                       (90.1% logic, 9.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 19.24 secs
+ 
+--> 
+
+Total memory usage is 269324 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
+

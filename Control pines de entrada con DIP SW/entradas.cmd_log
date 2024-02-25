@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/GPIO_IN/entradas.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/GPIO_IN/entradas.syr" 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/GPIO_IN/entradas.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/GPIO_IN/entradas.syr" 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/GPIO_IN/entradas.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/GPIO_IN/entradas.syr" 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/GPIO_IN/entradas.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/GPIO_IN/entradas.syr" 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/GPIO_IN/entradas.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/GPIO_IN/entradas.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-5 "entradas.ngc" entradas.ngd  
+map -intstyle ise -p xc3s50a-tq144-5 -cm area -ir off -pr off -c 100 -o entradas_map.ncd entradas.ngd entradas.pcf 
+par -w -intstyle ise -ol high -t 1 entradas_map.ncd entradas.ncd entradas.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml entradas.twx entradas.ncd -o entradas.twr entradas.pcf 

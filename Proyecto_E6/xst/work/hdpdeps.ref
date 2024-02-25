@@ -1,0 +1,51 @@
+V3 27
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Multiplexor.vhd" 2023/04/05.19:21:40 P.20131013
+EN work/Multiplexor 1680760005 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Multiplexor.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/Multiplexor/Behavioral 1680760006 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Multiplexor.vhd" \
+      EN work/Multiplexor 1680760005
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Reloj.vhd" 2023/04/05.23:46:39 P.20131013
+EN work/Reloj 1680760007 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Reloj.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/Reloj/Behavioral 1680760008 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Reloj.vhd" \
+      EN work/Reloj 1680760007
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Reloj_ADC.vhd" 2023/04/03.15:19:26 P.20131013
+EN work/Reloj_ADC 1680760013 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Reloj_ADC.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/Reloj_ADC/Behavioral 1680760014 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Reloj_ADC.vhd" \
+      EN work/Reloj_ADC 1680760013
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/RX.vhd" 2023/04/05.18:13:51 P.20131013
+EN work/RX 1680760003 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/RX.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/RX/Behavioral 1680760004 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/RX.vhd" \
+      EN work/RX 1680760003
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Servomotor.vhd" 2023/03/29.23:33:46 P.20131013
+EN work/Servomotor 1680760011 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Servomotor.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/Servomotor/Behavioral 1680760012 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Servomotor.vhd" \
+      EN work/Servomotor 1680760011
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Top.vhd" 2023/04/05.22:28:07 P.20131013
+EN work/Top 1680760015 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Top.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/Top/Behavioral 1680760016 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/Top.vhd" \
+      EN work/Top 1680760015 CP work/RX CP work/Multiplexor CP work/Reloj CP work/TX \
+      CP work/Servomotor CP work/Reloj_ADC
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/TX.vhd" 2023/04/05.23:40:39 P.20131013
+EN work/TX 1680760009 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/TX.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/TX/Behavioral 1680760010 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/Proyecto_E6/TX.vhd" \
+      EN work/TX 1680760009

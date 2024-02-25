@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/PWM/servo.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/PWM/servo.syr" 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/PWM/servo.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/PWM/servo.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-5 "servo.ngc" servo.ngd  
+map -intstyle ise -p xc3s50a-tq144-5 -cm area -ir off -pr off -c 100 -o servo_map.ncd servo.ngd servo.pcf 
+par -w -intstyle ise -ol high -t 1 servo_map.ncd servo.ncd servo.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml servo.twx servo.ncd -o servo.twr servo.pcf 
+xst -intstyle ise -ifn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/PWM/servo.xst" -ofn "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/PWM/servo.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-5 "servo.ngc" servo.ngd  
+map -intstyle ise -p xc3s50a-tq144-5 -cm area -ir off -pr off -c 100 -o servo_map.ncd servo.ngd servo.pcf 
+par -w -intstyle ise -ol high -t 1 servo_map.ncd servo.ncd servo.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml servo.twx servo.ncd -o servo.twr servo.pcf 

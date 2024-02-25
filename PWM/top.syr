@@ -1,0 +1,418 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc3s50a-5-tq144
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/PWM/servo.vhd" in Library work.
+Architecture behavioral of Entity servo is up to date.
+Compiling vhdl file "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/PWM/top.vhd" in Library work.
+Entity <top> compiled.
+Entity <top> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <servo> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top> in library <work> (Architecture <behavioral>).
+Entity <top> analyzed. Unit <top> generated.
+
+Analyzing Entity <servo> in library <work> (Architecture <Behavioral>).
+Entity <servo> analyzed. Unit <servo> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <servo>.
+    Related source file is "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/PWM/servo.vhd".
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <estado> of Case statement line 48 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <estado> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <estado>.
+    Found 16x10-bit ROM for signal <estado$mux0001> created at line 35.
+    Found 1-bit register for signal <attach>.
+    Found 25-bit register for signal <alto>.
+    Found 8-bit up counter for signal <ciclo>.
+    Found 12-bit up counter for signal <delay>.
+    Found 10-bit register for signal <estado>.
+    Found 14-bit up counter for signal <milis>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   3 Counter(s).
+	inferred  36 D-type flip-flop(s).
+Unit <servo> synthesized.
+
+
+Synthesizing Unit <top>.
+    Related source file is "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/PWM/top.vhd".
+Unit <top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x10-bit ROM                                         : 1
+# Counters                                             : 3
+ 12-bit up counter                                     : 1
+ 14-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 3
+ 1-bit register                                        : 1
+ 10-bit register                                       : 1
+ 25-bit register                                       : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <alto_2> in Unit <servo> is equivalent to the following FF/Latch, which will be removed : <alto_3> 
+INFO:Xst:2261 - The FF/Latch <alto_0> in Unit <servo> is equivalent to the following FF/Latch, which will be removed : <alto_1> 
+
+Synthesizing (advanced) Unit <servo>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_estado_mux0001> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <servo> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x10-bit ROM                                         : 1
+# Counters                                             : 2
+ 12-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 36
+ Flip-Flops                                            : 36
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <alto_2> in Unit <servo> is equivalent to the following FF/Latch, which will be removed : <alto_3> 
+INFO:Xst:2261 - The FF/Latch <alto_0> in Unit <servo> is equivalent to the following FF/Latch, which will be removed : <alto_1> 
+INFO:Xst:2261 - The FF/Latch <alto_7> in Unit <servo> is equivalent to the following FF/Latch, which will be removed : <alto_8> 
+INFO:Xst:2261 - The FF/Latch <alto_4> in Unit <servo> is equivalent to the following 2 FFs/Latches, which will be removed : <alto_5> <alto_6> 
+INFO:Xst:2261 - The FF/Latch <alto_13> in Unit <servo> is equivalent to the following 2 FFs/Latches, which will be removed : <alto_14> <alto_15> 
+INFO:Xst:2261 - The FF/Latch <alto_11> in Unit <servo> is equivalent to the following FF/Latch, which will be removed : <alto_12> 
+INFO:Xst:2261 - The FF/Latch <alto_9> in Unit <servo> is equivalent to the following FF/Latch, which will be removed : <alto_10> 
+INFO:Xst:2261 - The FF/Latch <alto_20> in Unit <servo> is equivalent to the following 4 FFs/Latches, which will be removed : <alto_21> <alto_22> <alto_23> <alto_24> 
+INFO:Xst:2261 - The FF/Latch <alto_18> in Unit <servo> is equivalent to the following FF/Latch, which will be removed : <alto_19> 
+INFO:Xst:2261 - The FF/Latch <alto_16> in Unit <servo> is equivalent to the following FF/Latch, which will be removed : <alto_17> 
+
+Optimizing unit <top> ...
+
+Optimizing unit <servo> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 5.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 41
+ Flip-Flops                                            : 41
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top.ngr
+Top Level Output File Name         : top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 6
+
+Cell Usage :
+# BELS                             : 108
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 18
+#      LUT2                        : 2
+#      LUT3                        : 18
+#      LUT3_L                      : 2
+#      LUT4                        : 17
+#      LUT4_D                      : 2
+#      LUT4_L                      : 5
+#      MUXCY                       : 18
+#      MUXF5                       : 2
+#      VCC                         : 1
+#      XORCY                       : 20
+# FlipFlops/Latches                : 41
+#      FD                          : 3
+#      FDR                         : 21
+#      FDRE                        : 8
+#      FDS                         : 9
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 5
+#      IBUF                        : 4
+#      OBUF                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50atq144-5 
+
+ Number of Slices:                       35  out of    704     4%  
+ Number of Slice Flip Flops:             41  out of   1408     2%  
+ Number of 4 input LUTs:                 66  out of   1408     4%  
+ Number of IOs:                           6
+ Number of bonded IOBs:                   6  out of    108     5%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 41    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 4.548ns (Maximum Frequency: 219.858MHz)
+   Minimum input arrival time before clock: 2.440ns
+   Maximum output required time after clock: 5.248ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.548ns (frequency: 219.858MHz)
+  Total number of paths / destination ports: 611 / 68
+-------------------------------------------------------------------------
+Delay:               4.548ns (Levels of Logic = 3)
+  Source:            servo/delay_10 (FF)
+  Destination:       servo/ciclo_7 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: servo/delay_10 to servo/ciclo_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.495   0.488  servo/delay_10 (servo/delay_10)
+     LUT4_D:I0->O          1   0.561   0.423  servo/milis_cmp_eq000019 (servo/milis_cmp_eq000019)
+     LUT3:I1->O            1   0.562   0.380  servo/milis_cmp_eq000044 (servo/milis_cmp_eq0000)
+     LUT3:I2->O            8   0.561   0.643  servo/ciclo_and000026 (servo/ciclo_and0000)
+     FDRE:R                    0.435          servo/ciclo_0
+    ----------------------------------------
+    Total                      4.548ns (2.614ns logic, 1.934ns route)
+                                       (57.5% logic, 42.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 40 / 19
+-------------------------------------------------------------------------
+Offset:              2.440ns (Levels of Logic = 2)
+  Source:            control<2> (PAD)
+  Destination:       servo/estado_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: control<2> to servo/estado_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   0.824   0.858  control_2_IBUF (control_2_IBUF)
+     LUT4:I0->O            1   0.561   0.000  servo/Mrom_estado_mux000111 (servo/Mrom_estado_mux0001)
+     FD:D                      0.197          servo/estado_0
+    ----------------------------------------
+    Total                      2.440ns (1.582ns logic, 0.858ns route)
+                                       (64.8% logic, 35.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              5.248ns (Levels of Logic = 1)
+  Source:            servo/attach (FF)
+  Destination:       attach (PAD)
+  Source Clock:      clk rising
+
+  Data Path: servo/attach to attach
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.495   0.357  servo/attach (servo/attach)
+     OBUF:I->O                 4.396          attach_OBUF (attach)
+    ----------------------------------------
+    Total                      5.248ns (4.891ns logic, 0.357ns route)
+                                       (93.2% logic, 6.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 13.38 secs
+ 
+--> 
+
+Total memory usage is 252016 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :   14 (   0 filtered)
+

@@ -1,0 +1,15 @@
+V3 7
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/PWM/servo.vhd" 2023/03/29.14:04:43 P.20131013
+EN work/servo 1680148033 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/PWM/servo.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/servo/Behavioral 1680148034 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/PWM/servo.vhd" \
+      EN work/servo 1680148033
+FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/PWM/top.vhd" 2023/03/29.21:47:08 P.20131013
+EN work/top 1680148035 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/PWM/top.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/top/Behavioral 1680148036 \
+      FL "C:/Users/Byron Montenegro/Documents/02.Proyectos_VHDL/PWM/top.vhd" \
+      EN work/top 1680148035 CP work/servo

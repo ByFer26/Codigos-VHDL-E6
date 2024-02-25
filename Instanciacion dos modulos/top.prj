@@ -1,0 +1,3 @@
+vhdl work "switch.vhd"
+vhdl work "led.vhd"
+vhdl work "top.vhd"

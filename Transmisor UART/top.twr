@@ -1,0 +1,558 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf elbertv2.ucf
+
+Design file:              top.ncd
+Physical constraint file: top.pcf
+Device,package,speed:     xc3s50a,tq144,-5 (PRODUCTION 1.42 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 2161 paths analyzed, 159 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   7.328ns.
+--------------------------------------------------------------------------------
+
+Paths for end point transmisor/estado_16 (SLICE_X15Y14.SR), 41 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     76.005ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               transmisor/delay_cambio_6 (FF)
+  Destination:          transmisor/estado_16 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      7.215ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.113ns (0.204 - 0.317)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: transmisor/delay_cambio_6 to transmisor/estado_16
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y23.XQ       Tcko                  0.495   transmisor/delay_cambio<6>
+                                                       transmisor/delay_cambio_6
+    SLICE_X7Y25.F3       net (fanout=2)        0.983   transmisor/delay_cambio<6>
+    SLICE_X7Y25.COUT     Topcyf                1.026   transmisor/delay_cambio_cmp_eq0000_wg_cy<1>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_lut<0>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<0>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<1>
+    SLICE_X7Y26.CIN      net (fanout=1)        0.000   transmisor/delay_cambio_cmp_eq0000_wg_cy<1>
+    SLICE_X7Y26.COUT     Tbyp                  0.130   transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<2>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X7Y27.CIN      net (fanout=1)        0.000   transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X7Y27.COUT     Tbyp                  0.130   transmisor/delay_cambio_cmp_eq0000
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<4>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<5>
+    SLICE_X14Y9.F4       net (fanout=22)       2.416   transmisor/delay_cambio_cmp_eq0000
+    SLICE_X14Y9.X        Tilo                  0.601   transmisor/estado_and0000
+                                                       transmisor/estado_and000027
+    SLICE_X15Y14.SR      net (fanout=9)        1.001   transmisor/estado_and0000
+    SLICE_X15Y14.CLK     Tsrck                 0.433   transmisor/estado<16>
+                                                       transmisor/estado_16
+    -------------------------------------------------  ---------------------------
+    Total                                      7.215ns (2.815ns logic, 4.400ns route)
+                                                       (39.0% logic, 61.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     76.062ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               transmisor/delay_cambio_1 (FF)
+  Destination:          transmisor/estado_16 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      7.177ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.094ns (0.204 - 0.298)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: transmisor/delay_cambio_1 to transmisor/estado_16
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y20.YQ       Tcko                  0.524   transmisor/delay_cambio<0>
+                                                       transmisor/delay_cambio_1
+    SLICE_X7Y26.G3       net (fanout=2)        1.063   transmisor/delay_cambio<1>
+    SLICE_X7Y26.COUT     Topcyg                1.009   transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_lut<3>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X7Y27.CIN      net (fanout=1)        0.000   transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X7Y27.COUT     Tbyp                  0.130   transmisor/delay_cambio_cmp_eq0000
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<4>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<5>
+    SLICE_X14Y9.F4       net (fanout=22)       2.416   transmisor/delay_cambio_cmp_eq0000
+    SLICE_X14Y9.X        Tilo                  0.601   transmisor/estado_and0000
+                                                       transmisor/estado_and000027
+    SLICE_X15Y14.SR      net (fanout=9)        1.001   transmisor/estado_and0000
+    SLICE_X15Y14.CLK     Tsrck                 0.433   transmisor/estado<16>
+                                                       transmisor/estado_16
+    -------------------------------------------------  ---------------------------
+    Total                                      7.177ns (2.697ns logic, 4.480ns route)
+                                                       (37.6% logic, 62.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     76.202ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               transmisor/delay_cambio_7 (FF)
+  Destination:          transmisor/estado_16 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      7.018ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.113ns (0.204 - 0.317)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: transmisor/delay_cambio_7 to transmisor/estado_16
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y23.YQ       Tcko                  0.524   transmisor/delay_cambio<6>
+                                                       transmisor/delay_cambio_7
+    SLICE_X7Y25.F4       net (fanout=2)        0.757   transmisor/delay_cambio<7>
+    SLICE_X7Y25.COUT     Topcyf                1.026   transmisor/delay_cambio_cmp_eq0000_wg_cy<1>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_lut<0>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<0>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<1>
+    SLICE_X7Y26.CIN      net (fanout=1)        0.000   transmisor/delay_cambio_cmp_eq0000_wg_cy<1>
+    SLICE_X7Y26.COUT     Tbyp                  0.130   transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<2>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X7Y27.CIN      net (fanout=1)        0.000   transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X7Y27.COUT     Tbyp                  0.130   transmisor/delay_cambio_cmp_eq0000
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<4>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<5>
+    SLICE_X14Y9.F4       net (fanout=22)       2.416   transmisor/delay_cambio_cmp_eq0000
+    SLICE_X14Y9.X        Tilo                  0.601   transmisor/estado_and0000
+                                                       transmisor/estado_and000027
+    SLICE_X15Y14.SR      net (fanout=9)        1.001   transmisor/estado_and0000
+    SLICE_X15Y14.CLK     Tsrck                 0.433   transmisor/estado<16>
+                                                       transmisor/estado_16
+    -------------------------------------------------  ---------------------------
+    Total                                      7.018ns (2.844ns logic, 4.174ns route)
+                                                       (40.5% logic, 59.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point transmisor/estado_12 (SLICE_X15Y12.SR), 41 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     76.252ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               transmisor/delay_cambio_6 (FF)
+  Destination:          transmisor/estado_12 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      6.977ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.104ns (0.213 - 0.317)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: transmisor/delay_cambio_6 to transmisor/estado_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y23.XQ       Tcko                  0.495   transmisor/delay_cambio<6>
+                                                       transmisor/delay_cambio_6
+    SLICE_X7Y25.F3       net (fanout=2)        0.983   transmisor/delay_cambio<6>
+    SLICE_X7Y25.COUT     Topcyf                1.026   transmisor/delay_cambio_cmp_eq0000_wg_cy<1>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_lut<0>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<0>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<1>
+    SLICE_X7Y26.CIN      net (fanout=1)        0.000   transmisor/delay_cambio_cmp_eq0000_wg_cy<1>
+    SLICE_X7Y26.COUT     Tbyp                  0.130   transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<2>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X7Y27.CIN      net (fanout=1)        0.000   transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X7Y27.COUT     Tbyp                  0.130   transmisor/delay_cambio_cmp_eq0000
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<4>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<5>
+    SLICE_X14Y9.F4       net (fanout=22)       2.416   transmisor/delay_cambio_cmp_eq0000
+    SLICE_X14Y9.X        Tilo                  0.601   transmisor/estado_and0000
+                                                       transmisor/estado_and000027
+    SLICE_X15Y12.SR      net (fanout=9)        0.763   transmisor/estado_and0000
+    SLICE_X15Y12.CLK     Tsrck                 0.433   transmisor/estado<12>
+                                                       transmisor/estado_12
+    -------------------------------------------------  ---------------------------
+    Total                                      6.977ns (2.815ns logic, 4.162ns route)
+                                                       (40.3% logic, 59.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     76.309ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               transmisor/delay_cambio_1 (FF)
+  Destination:          transmisor/estado_12 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      6.939ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.085ns (0.213 - 0.298)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: transmisor/delay_cambio_1 to transmisor/estado_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y20.YQ       Tcko                  0.524   transmisor/delay_cambio<0>
+                                                       transmisor/delay_cambio_1
+    SLICE_X7Y26.G3       net (fanout=2)        1.063   transmisor/delay_cambio<1>
+    SLICE_X7Y26.COUT     Topcyg                1.009   transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_lut<3>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X7Y27.CIN      net (fanout=1)        0.000   transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X7Y27.COUT     Tbyp                  0.130   transmisor/delay_cambio_cmp_eq0000
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<4>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<5>
+    SLICE_X14Y9.F4       net (fanout=22)       2.416   transmisor/delay_cambio_cmp_eq0000
+    SLICE_X14Y9.X        Tilo                  0.601   transmisor/estado_and0000
+                                                       transmisor/estado_and000027
+    SLICE_X15Y12.SR      net (fanout=9)        0.763   transmisor/estado_and0000
+    SLICE_X15Y12.CLK     Tsrck                 0.433   transmisor/estado<12>
+                                                       transmisor/estado_12
+    -------------------------------------------------  ---------------------------
+    Total                                      6.939ns (2.697ns logic, 4.242ns route)
+                                                       (38.9% logic, 61.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     76.449ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               transmisor/delay_cambio_7 (FF)
+  Destination:          transmisor/estado_12 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      6.780ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.104ns (0.213 - 0.317)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: transmisor/delay_cambio_7 to transmisor/estado_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y23.YQ       Tcko                  0.524   transmisor/delay_cambio<6>
+                                                       transmisor/delay_cambio_7
+    SLICE_X7Y25.F4       net (fanout=2)        0.757   transmisor/delay_cambio<7>
+    SLICE_X7Y25.COUT     Topcyf                1.026   transmisor/delay_cambio_cmp_eq0000_wg_cy<1>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_lut<0>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<0>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<1>
+    SLICE_X7Y26.CIN      net (fanout=1)        0.000   transmisor/delay_cambio_cmp_eq0000_wg_cy<1>
+    SLICE_X7Y26.COUT     Tbyp                  0.130   transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<2>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X7Y27.CIN      net (fanout=1)        0.000   transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X7Y27.COUT     Tbyp                  0.130   transmisor/delay_cambio_cmp_eq0000
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<4>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<5>
+    SLICE_X14Y9.F4       net (fanout=22)       2.416   transmisor/delay_cambio_cmp_eq0000
+    SLICE_X14Y9.X        Tilo                  0.601   transmisor/estado_and0000
+                                                       transmisor/estado_and000027
+    SLICE_X15Y12.SR      net (fanout=9)        0.763   transmisor/estado_and0000
+    SLICE_X15Y12.CLK     Tsrck                 0.433   transmisor/estado<12>
+                                                       transmisor/estado_12
+    -------------------------------------------------  ---------------------------
+    Total                                      6.780ns (2.844ns logic, 3.936ns route)
+                                                       (41.9% logic, 58.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point transmisor/estado_13 (SLICE_X15Y12.SR), 41 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     76.252ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               transmisor/delay_cambio_6 (FF)
+  Destination:          transmisor/estado_13 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      6.977ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.104ns (0.213 - 0.317)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: transmisor/delay_cambio_6 to transmisor/estado_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y23.XQ       Tcko                  0.495   transmisor/delay_cambio<6>
+                                                       transmisor/delay_cambio_6
+    SLICE_X7Y25.F3       net (fanout=2)        0.983   transmisor/delay_cambio<6>
+    SLICE_X7Y25.COUT     Topcyf                1.026   transmisor/delay_cambio_cmp_eq0000_wg_cy<1>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_lut<0>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<0>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<1>
+    SLICE_X7Y26.CIN      net (fanout=1)        0.000   transmisor/delay_cambio_cmp_eq0000_wg_cy<1>
+    SLICE_X7Y26.COUT     Tbyp                  0.130   transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<2>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X7Y27.CIN      net (fanout=1)        0.000   transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X7Y27.COUT     Tbyp                  0.130   transmisor/delay_cambio_cmp_eq0000
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<4>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<5>
+    SLICE_X14Y9.F4       net (fanout=22)       2.416   transmisor/delay_cambio_cmp_eq0000
+    SLICE_X14Y9.X        Tilo                  0.601   transmisor/estado_and0000
+                                                       transmisor/estado_and000027
+    SLICE_X15Y12.SR      net (fanout=9)        0.763   transmisor/estado_and0000
+    SLICE_X15Y12.CLK     Tsrck                 0.433   transmisor/estado<12>
+                                                       transmisor/estado_13
+    -------------------------------------------------  ---------------------------
+    Total                                      6.977ns (2.815ns logic, 4.162ns route)
+                                                       (40.3% logic, 59.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     76.309ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               transmisor/delay_cambio_1 (FF)
+  Destination:          transmisor/estado_13 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      6.939ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.085ns (0.213 - 0.298)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: transmisor/delay_cambio_1 to transmisor/estado_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y20.YQ       Tcko                  0.524   transmisor/delay_cambio<0>
+                                                       transmisor/delay_cambio_1
+    SLICE_X7Y26.G3       net (fanout=2)        1.063   transmisor/delay_cambio<1>
+    SLICE_X7Y26.COUT     Topcyg                1.009   transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_lut<3>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X7Y27.CIN      net (fanout=1)        0.000   transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X7Y27.COUT     Tbyp                  0.130   transmisor/delay_cambio_cmp_eq0000
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<4>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<5>
+    SLICE_X14Y9.F4       net (fanout=22)       2.416   transmisor/delay_cambio_cmp_eq0000
+    SLICE_X14Y9.X        Tilo                  0.601   transmisor/estado_and0000
+                                                       transmisor/estado_and000027
+    SLICE_X15Y12.SR      net (fanout=9)        0.763   transmisor/estado_and0000
+    SLICE_X15Y12.CLK     Tsrck                 0.433   transmisor/estado<12>
+                                                       transmisor/estado_13
+    -------------------------------------------------  ---------------------------
+    Total                                      6.939ns (2.697ns logic, 4.242ns route)
+                                                       (38.9% logic, 61.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     76.449ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               transmisor/delay_cambio_7 (FF)
+  Destination:          transmisor/estado_13 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      6.780ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.104ns (0.213 - 0.317)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: transmisor/delay_cambio_7 to transmisor/estado_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y23.YQ       Tcko                  0.524   transmisor/delay_cambio<6>
+                                                       transmisor/delay_cambio_7
+    SLICE_X7Y25.F4       net (fanout=2)        0.757   transmisor/delay_cambio<7>
+    SLICE_X7Y25.COUT     Topcyf                1.026   transmisor/delay_cambio_cmp_eq0000_wg_cy<1>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_lut<0>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<0>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<1>
+    SLICE_X7Y26.CIN      net (fanout=1)        0.000   transmisor/delay_cambio_cmp_eq0000_wg_cy<1>
+    SLICE_X7Y26.COUT     Tbyp                  0.130   transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<2>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X7Y27.CIN      net (fanout=1)        0.000   transmisor/delay_cambio_cmp_eq0000_wg_cy<3>
+    SLICE_X7Y27.COUT     Tbyp                  0.130   transmisor/delay_cambio_cmp_eq0000
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<4>
+                                                       transmisor/delay_cambio_cmp_eq0000_wg_cy<5>
+    SLICE_X14Y9.F4       net (fanout=22)       2.416   transmisor/delay_cambio_cmp_eq0000
+    SLICE_X14Y9.X        Tilo                  0.601   transmisor/estado_and0000
+                                                       transmisor/estado_and000027
+    SLICE_X15Y12.SR      net (fanout=9)        0.763   transmisor/estado_and0000
+    SLICE_X15Y12.CLK     Tsrck                 0.433   transmisor/estado<12>
+                                                       transmisor/estado_13
+    -------------------------------------------------  ---------------------------
+    Total                                      6.780ns (2.844ns logic, 3.936ns route)
+                                                       (41.9% logic, 58.1% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point transmisor/delay_cambio_22 (SLICE_X5Y31.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.356ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               transmisor/delay_cambio_22 (FF)
+  Destination:          transmisor/delay_cambio_22 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.356ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 83.333ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: transmisor/delay_cambio_22 to transmisor/delay_cambio_22
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y31.XQ       Tcko                  0.396   transmisor/delay_cambio<22>
+                                                       transmisor/delay_cambio_22
+    SLICE_X5Y31.F4       net (fanout=2)        0.258   transmisor/delay_cambio<22>
+    SLICE_X5Y31.CLK      Tckf        (-Th)    -0.702   transmisor/delay_cambio<22>
+                                                       transmisor/delay_cambio<22>_rt
+                                                       transmisor/Mcount_delay_cambio_xor<22>
+                                                       transmisor/delay_cambio_22
+    -------------------------------------------------  ---------------------------
+    Total                                      1.356ns (1.098ns logic, 0.258ns route)
+                                                       (81.0% logic, 19.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point transmisor/estado_8 (SLICE_X15Y10.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.376ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               transmisor/estado_8 (FF)
+  Destination:          transmisor/estado_8 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.376ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 83.333ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: transmisor/estado_8 to transmisor/estado_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y10.XQ      Tcko                  0.396   transmisor/estado<8>
+                                                       transmisor/estado_8
+    SLICE_X15Y10.F4      net (fanout=2)        0.278   transmisor/estado<8>
+    SLICE_X15Y10.CLK     Tckf        (-Th)    -0.702   transmisor/estado<8>
+                                                       transmisor/estado<8>_rt
+                                                       transmisor/Mcount_estado_xor<8>
+                                                       transmisor/estado_8
+    -------------------------------------------------  ---------------------------
+    Total                                      1.376ns (1.098ns logic, 0.278ns route)
+                                                       (79.8% logic, 20.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point transmisor/estado_12 (SLICE_X15Y12.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.376ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               transmisor/estado_12 (FF)
+  Destination:          transmisor/estado_12 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.376ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 83.333ns
+  Destination Clock:    clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: transmisor/estado_12 to transmisor/estado_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y12.XQ      Tcko                  0.396   transmisor/estado<12>
+                                                       transmisor/estado_12
+    SLICE_X15Y12.F4      net (fanout=2)        0.278   transmisor/estado<12>
+    SLICE_X15Y12.CLK     Tckf        (-Th)    -0.702   transmisor/estado<12>
+                                                       transmisor/estado<12>_rt
+                                                       transmisor/Mcount_estado_xor<12>
+                                                       transmisor/estado_12
+    -------------------------------------------------  ---------------------------
+    Total                                      1.376ns (1.098ns logic, 0.278ns route)
+                                                       (79.8% logic, 20.2% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 82.005ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 83.333ns
+  Low pulse: 41.666ns
+  Low pulse limit: 0.664ns (Tcl)
+  Physical resource: transmisor/salida/CLK
+  Logical resource: transmisor/salida/CK
+  Location pin: SLICE_X14Y4.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 82.005ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 83.333ns
+  High pulse: 41.666ns
+  High pulse limit: 0.664ns (Tch)
+  Physical resource: transmisor/salida/CLK
+  Logical resource: transmisor/salida/CK
+  Location pin: SLICE_X14Y4.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 82.005ns (period - min period limit)
+  Period: 83.333ns
+  Min period limit: 1.328ns (753.012MHz) (Tcp)
+  Physical resource: transmisor/salida/CLK
+  Logical resource: transmisor/salida/CK
+  Location pin: SLICE_X14Y4.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    7.328|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 2161 paths, 0 nets, and 187 connections
+
+Design statistics:
+   Minimum period:   7.328ns{1}   (Maximum frequency: 136.463MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Tue Mar 28 21:43:24 2023 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 188 MB
+
+
+

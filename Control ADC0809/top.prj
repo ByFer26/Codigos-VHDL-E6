@@ -1,0 +1,3 @@
+vhdl work "reloj.vhd"
+vhdl work "multiplexor.vhd"
+vhdl work "top.vhd"
